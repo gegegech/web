@@ -1,3 +1,12 @@
+/* universal box sizing */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
 html {
     font-size: 20px;
 }
@@ -22,8 +31,9 @@ html::after {
 body {
     font-family: 'Roboto Slab', serif;
     color: $primary-color;
-    padding: 0 5%;
     max-width: 1200px;
+    padding: 0 5%;
+    margin: 0 auto;
 }
 
 a {

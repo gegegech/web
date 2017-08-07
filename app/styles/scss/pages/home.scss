@@ -36,18 +36,21 @@ h1 {
 }
 
 .banner .img1 {
-    width: 66%;
+    width: 66.66%;
+    width: calc(100% * 2/3);
 }
 
 .banner .img2 {
-    width: 33%;
+    width: 33.33%;
+    width: calc(100% / 3);
     position: absolute;
     top: 0;
     right: 0;
 }
 
 .banner .img3 {
-    width: 33%;
+    width: 33.33%;
+    width: calc(100% / 3);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -56,7 +59,7 @@ h1 {
 /* --------------------------- */
 
 .why-buy {
-    background: rgba(150, 150, 150, .7);
+    background: rgba(210, 210, 210, .9);
 }
 
 /* --------------------------- */
@@ -66,29 +69,58 @@ h1 {
     font-size: 30px;
 }
 
+.form form {
+    /* position: fixed; */
+    top: 5%;
+    left: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    overflow-y: scroll;
+}
+
 input, textarea {
     font-size: 30px;
     padding: 10px;
-    margin: 15px;
+    margin: 15px 0;
+}
+
+.long input,
+.long textarea {
+    width: 100%;
+}
+
+label {
+    display: none;
 }
 
 /* --------------------------- */
 
 .products {
-    background: rgba(255, 255, 255, .9);
+    background: rgba(245, 245, 245, .9);
+}
+
+.products h3 {
+    padding: 1%;
+    padding-bottom: 0.5%;
+    font-size: 36px;
 }
 
 .sattelliste {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 0.5%;
 }
 
 .product-wrapper {
-    width: 25%;
+    width: 23%;
     flex-grow: 1;
+    margin: 0.5%;
 }
 
 .product-wrapper img {
     width: 100%;
+    display: block;
 }
