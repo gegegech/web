@@ -1,7 +1,7 @@
 var sattel = function() {
 
     var self = this;
-    
+
 
     self.getSattellist = function(count) {
         var text = '';
@@ -13,8 +13,8 @@ var sattel = function() {
 
 
     getHtml = function(i) {
-        var text = '<div>'
-             + '<img src="pics/sattelbezug/Sattelbez_neue_HP%20' + pad3(i) + '.jpg" class="sattel" />'
+        var text = '<div class="product-wrapper">'
+             + '<img src="images/sattelbezug/Sattelbezug-' + pad3(i) + '.jpg" class="product" />'
              + '</div>\n';
         return text;
     }
@@ -23,13 +23,13 @@ var sattel = function() {
     pad3 = function(num) {
         return ("000" + num).substr(-3,3);
     }
-    
+
 
     return self;
 }();
 
 
-document.getElementById("sattelfotos").innerHTML = sattel.getSattellist(33);
+document.getElementById("sattelliste").innerHTML = sattel.getSattellist(3);
 
 /* HTML
 <div id="sattelfotos"></div>
