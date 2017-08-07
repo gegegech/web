@@ -2,6 +2,14 @@ html::after {
     opacity: 0.5;
 }
 
+/* --------------------------- */
+
+.startseite {
+    display: block;
+}
+
+/* --------------------------- */
+
 h1 {
     font-size: 70px;
 }
@@ -49,3 +57,14 @@ h1 {
     background: rgba(150, 150, 150, .7);
 }
 
+/* --------------------------- */
+
+.form {
+    display: block;
+    font-size: 30px;
+}
+
+input {
+    font-size: 30px;
+    padding: 6px;
+}
