@@ -29,7 +29,7 @@ var sattel = function() {
 }();
 
 
-document.getElementById("sattelliste").innerHTML = sattel.getSattellist(9);
+document.getElementById("sattelliste").innerHTML = sattel.getSattellist(35);
 
 /* HTML
 <div id="sattelfotos"></div>
