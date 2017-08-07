@@ -2,12 +2,29 @@ html {
     font-size: 20px;
 }
 
+html::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position:center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url(../images/background.jpg);
+}
+
 body {
     font-family: 'Roboto Slab', serif;
     color: $primary-color;
+    padding: 0 5%;
 }
 
 a {
     color: $primary-color;
 }
-
