@@ -1,0 +1,37 @@
+@media screen and (max-width: 640px) {
+
+html {
+    font-size: 14px;
+}
+
+.menu a {
+    display: block;
+    border-left: 2px solid transparent;
+}
+
+.menu a.active, .menu a:hover {
+    border-bottom: none;
+    border-left: 2px solid $primary-color;
+}
+
+.logo {
+    transform: scale(0.7);
+    transform-origin: left top;
+}
+
+.bigtext {
+    font-size: 180%;
+    animation: none;
+}
+
+
+/* vita */
+html.vita::after {
+    opacity: 0.75;
+}
+
+html.vita .cv {
+    margin-top: 80px;
+}
+
+}
