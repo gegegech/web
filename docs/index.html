@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js index" lang="">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bestellformular | gegege.ch</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300|Roboto:100" rel="stylesheet">
+</head>
+<body>
+    <div class="title">
+        <h1>Velo Sattelüberzug</h1>
+        <h2>der peppige Wasserschutz für deinen Velosattel</h2>
+    </div>
+    <div class="banner">
+        <img class="img1" src="images/vintage_027.jpg" />
+        <img class="img2" src="images/vintage_031.jpg" />
+        <img class="img3" src="images/vintage_081.jpg" />
+    </div>
+    <div class="why-buy">
+        <i class="fa fa-umbrella" aria-hidden="true"></i>
+        <p>Dank diesem Sattelüberzug kann ich mein Velo bei jedem Wetter an der Hardbrücke unter freiem Himmel stehen lassen.</p><br>
+        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <p>Für 25.- sieht mein alter Drahtesel wieder taufrisch aus!</p>
+        <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
+        <p>Handmade in Switzerland</p>
+
+    </div>
+    <div class="form">
+        <!-- Das Formular beginnt hier, die folgende Zeile NICHT ändern: -->
+        <form action="http://www.formular-chef.de/fc.cgi" method="post" enctype="multipart/form-data">
+
+        <input type="hidden" name="absender" value="ansgar.john@gmail.com">
+
+        <!-- Wir geben (zusätzlich) einen festen eMail-Empfänger an: -->
+        <input type="hidden" name="empfaenger" value="ansgar.john@gmail.com">
+        <!-- Wir definieren einen festen Betreff: -->
+        <input type="hidden" name="betreff" value="Ihre Bestellung vom ##DATUM##, ##UHRZEIT## | gegege.ch">
+        <!-- URL des E-Mail-Templates: -->
+        <input type="hidden" name="template_mail" value="https://gegegech.github.io/web/mail/template-email-customer.html">
+
+        <!-- Der Besucher soll eine Bestätigungsmail erhalten: -->
+        <input type="hidden" name="kopie_an_absender" value="1">
+        <!-- Der Betreff der Bestätigungsmail lautet: -->
+        <input type="hidden" name="kopie_betreff" value="Vielen Dank für Ihre Bestellung">
+        <!-- Der URL zum Template der Bestätigungsmail: -->
+        <input type="hidden" name="kopie_an_absender_template" value="https://gegegech.github.io/web/mail/template-email-customer.html">
+
+        <!-- Der URL zum Antwortseiten-Template: -->
+        <input type="hidden" name="template_antwort" value="https://gegegech.github.io/web/mail/template-email-customer.html">
+        <!-- Der URL zum Fehlerseiten-Template: -->
+        <input type="hidden" name="template_fehler" value="https://gegegech.github.io/web/mail/template-email-customer.html">
+
+        <!-- Hier beginnen die Formular-Felder, die dem Besucher angezeigt werden: -->
+
+        <!--
+            <label for="Anrede">Anrede:</label>
+            <select name="Anrede" id="Anrede" size="1">
+                <option>Herr</option>
+                <option>Frau</option>
+                <option>Firma</option>
+            </select>
+        -->
+
+        <div>
+            <label for="Vorname">Vorname:</label>
+            <input name="Vorname" id="Vorname">
+
+            <label for="Nachname">Nachname:</label>
+            <input name="Nachname" id="Nachname">
+        </div>
+
+        <div>
+            <label for="Strasse">Strasse und Nummer:</label>
+            <input name="Strasse" id="Strasse">
+        </div>
+
+        <div>
+            <label for="PLZ">PLZ:</label>
+            <input name="PLZ" id="PLZ">
+
+            <label for="Ort">Ort:</label>
+            <input name="Ort" id="Ort">
+        </div>
+
+        <!--
+            <label for="Telefon-Nr.">Telefon-Nummer:</label>
+            <input name="Telefon-Nr." id="Telefon-Nr.">
+        -->
+
+        <div>
+            <label for="Email">E-Mail:</label>
+            <input name="Email" id="Email">
+        </div>
+
+        <div>
+            <label for="text">Bemerkungen:</label>
+            <textarea id="text" name="text" rows="4" cols="30"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Senden">
+        </div>
+        </form>
+        <br>
+    </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. ->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-99818667-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    -->
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
+
