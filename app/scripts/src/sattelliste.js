@@ -14,7 +14,7 @@ var sattel = function() {
 
     getHtml = function(i) {
         var text = '<div class="product-wrapper">'
-             + '<img src="images/sattelbezug/Sattelbezug-' + pad3(i) + '.jpg" class="product" />'
+             + '<img src="images/sattelbezug-small/Sattelbezug-' + pad3(i) + '.jpg" class="product" />'
              + '</div>\n';
         return text;
     }
@@ -29,7 +29,7 @@ var sattel = function() {
 }();
 
 
-document.getElementById("sattelliste").innerHTML = sattel.getSattellist(3);
+document.getElementById("sattelliste").innerHTML = sattel.getSattellist(9);
 
 /* HTML
 <div id="sattelfotos"></div>
