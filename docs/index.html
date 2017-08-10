@@ -47,10 +47,10 @@
             </div>
         </div>
     </div>
-    <div class="form">
+    <div class="form hidden">
+        <div class="formBackground" onclick="sattel.hide();"></div>
         <!-- Das Formular beginnt hier, die folgende Zeile NICHT ändern: -->
         <form action="http://www.formular-chef.de/fc.cgi" method="post" enctype="multipart/form-data">
-
         <input type="hidden" name="absender" value="ansgar.john@gmail.com">
 
         <!-- Wir geben (zusätzlich) einen festen eMail-Empfänger an: -->
@@ -83,6 +83,13 @@
             </select>
         -->
 
+
+        <i class="fa fa-times" aria-hidden="true" onclick="sattel.hide();"></i>
+
+        <div id="pic">
+
+        </div>
+
         <div>
             <label for="Vorname">Vorname:</label>
             <input name="Vorname" id="Vorname" placeholder="Vorname">
@@ -90,7 +97,6 @@
             <label for="Nachname">Nachname:</label>
             <input name="Nachname" id="Nachname" placeholder="Nachname">
         </div>
-
         <div class="long">
             <label for="Strasse">Strasse und Nummer:</label>
             <input name="Strasse" id="Strasse" placeholder="Strasse">
@@ -98,10 +104,10 @@
 
         <div>
             <label for="PLZ">PLZ:</label>
-            <input name="PLZ" id="PLZ" placeholder="PLZ">
+            <input class="plz" name="PLZ" id="PLZ" placeholder="PLZ">
 
             <label for="Ort">Ort:</label>
-            <input name="Ort" id="Ort" placeholder="Ort">
+            <input class="ort" name="Ort" id="Ort" placeholder="Ort">
         </div>
 
         <!--
@@ -123,9 +129,10 @@
             <input type="submit" value="Senden">
         </div>
         </form>
-        <br>
     </div>
 
+    <!-- div class="preis">25.-</div -->
+    
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. ->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
