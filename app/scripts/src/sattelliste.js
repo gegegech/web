@@ -13,8 +13,9 @@ var sattel = function() {
 
 
     getHtml = function(i) {
+        var ipad = pad3(i);
         var text = '<div class="product-wrapper">'
-             + '<img src="images/sattelbezug-small/Sattelbezug-' + pad3(i) + '.jpg" class="product" />'
+             + '<img src="images/sattelbezug-small/Sattelbezug-' + ipad + '.jpg" onclick="sattel.buy(\'' + ipad + '\')" class="product" />'
              + '</div>\n';
         return text;
     }
@@ -22,6 +23,18 @@ var sattel = function() {
 
     pad3 = function(num) {
         return ("000" + num).substr(-3,3);
+    }
+
+
+    self.buy = function(str) {
+        var pic = '<img src="images/sattelbezug-small/Sattelbezug-' + str + '.jpg" />';
+        document.getElementById("pic").innerHTML = pic;
+        $('.form').removeClass('hidden');
+
+    }
+
+    self.hide = function() {
+         $('.form').addClass('hidden');
     }
 
 

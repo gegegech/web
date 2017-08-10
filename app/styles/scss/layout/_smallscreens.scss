@@ -1,7 +1,16 @@
 @media screen and (max-width: 640px) {
 
-html {
-    font-size: 14px;
-}
+    html {
+        font-size: 14px;
+    }
 
+    .why-buy {
+        flex-direction: column;
+    }
+
+    input, textarea {
+        padding: 3px;
+        margin: 5px 0 3px 5px;
+        border: 1px solid grey;
+    }
 }
