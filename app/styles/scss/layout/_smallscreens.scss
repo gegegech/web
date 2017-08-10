@@ -4,8 +4,38 @@
         font-size: 14px;
     }
 
+    .banner .img1 {
+        width: 100%;
+    }
+
+    .banner .img2 {
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        top: initial;
+    }
+
+    .banner .img3 {
+        width: 50%;
+        position: relative;
+    }
+
     .why-buy {
         flex-direction: column;
+    }
+
+    .why-buy .fa {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        line-height: 80px;
+        margin: 20px;
+    }
+
+    .product-wrapper {
+        width: 32.33%;
+        margin: 0.5%;
     }
 
     input, textarea {

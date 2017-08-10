@@ -1,3 +1,12 @@
+/*
+TODO: h1 und h2 näher zusammen
+TODO: Formular: rand unter bild (0.5%?)
+TODO: Titel für Formular
+TODO: Preis (muss änderbar sein über eine Variable in JS!)
+TODO: über Mirjam
+TODO: Logo
+*/
+
 html::after {
     opacity: 0.5;
 }
@@ -12,6 +21,7 @@ html::after {
 
 .content {
     box-shadow: 0px 3px 12px rgba(0, 0, 0, .5);
+    margin-bottom: 3%;
 }
 
 /* --------------------------- */
@@ -209,8 +219,7 @@ label {
 }
 
 .product-wrapper {
-    width: 23%;
-    flex-grow: 1;
+    width: 24%;
     margin: 0.5%;
 }
 .product-wrapper:hover {
@@ -222,6 +231,7 @@ label {
     width: 100%;
     display: block;
 }
+
 /* --------------------------- */
 
 .footer {
@@ -245,3 +255,16 @@ label {
     color: white;
 }
 
+/* --------------------------- */
+
+.preis {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    right: 18%;
+    height: 150px;
+    width: 0px;
+    border-bottom: 40px solid transparent;
+    border-right: 40px solid yellow;
+    border-left: 40px solid yellow;
+}
