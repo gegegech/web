@@ -1,7 +1,4 @@
 /*
-TODO: h1 und h2 näher zusammen
-TODO: Formular: rand unter bild (0.5%?)
-TODO: Titel für Formular
 TODO: Preis (muss änderbar sein über eine Variable in JS!)
 TODO: über Mirjam
 TODO: Logo
@@ -36,9 +33,15 @@ h1 {
     font-size: 275%;
     /* padding-left: 5%; */
     line-height: 1.1;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 1%;
+    padding-bottom: 2%;
     color: rgb(224, 161, 10);
+}
+
+h3 {
+    padding: 1%;
+    padding-bottom: 0.5%;
+    font-size: 180%;
 }
 
 /* --------------------------- */
@@ -146,6 +149,7 @@ h1 {
 #pic img {
     width: 100%;
     height: 100%;
+    margin-bottom: 3%;
 }
 
 .hidden {
@@ -205,12 +209,6 @@ label {
     background: rgba(245, 245, 245, .9);
 }
 
-.products h3 {
-    padding: 1%;
-    padding-bottom: 0.5%;
-    font-size: 180%;
-}
-
 .sattelliste {
     display: flex;
     flex-direction: row;
@@ -259,7 +257,7 @@ label {
 
 .preis {
     position: fixed;
-    text-align: center;
+    font-size: 150%;
     top: 0;
     right: 18%;
     height: 150px;
