@@ -17,8 +17,8 @@ var sattel = function() {
 
     getHtml = function(i) {
         var ipad = pad3(i);
-        var text = '<div class="product-wrapper">'
-             + '<img src="images/sattelbezug-small/Sattelbezug-' + ipad + '.jpg" onclick="sattel.buy(\'' + ipad + '\')" class="product" />'
+        var text = '<div class="product-wrapper" onclick="sattel.buy(\'' + ipad + '\')" class="product">'
+             + '<img src="images/sattelbezug-small/Sattelbezug-' + ipad + '.jpg" />'
              + '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + preis + '</div>'
              + '</div>\n';
         return text;
