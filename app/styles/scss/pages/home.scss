@@ -138,7 +138,7 @@ h3 {
     bottom: 5%;
     padding: 2% 4%;
     color: rgba(255, 255, 255, 1);
-    background: rgba(0, 0, 0, .9);
+    background: rgba(0, 0, 0, .7);
 }
 
 .product-wrapper:hover .cart {
@@ -151,7 +151,7 @@ h3 {
 
 .product-wrapper:hover {
     cursor: pointer;
-    border: 3px solid black;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, .5);
 }
 
 .product-wrapper img {
