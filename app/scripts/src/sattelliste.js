@@ -1,4 +1,4 @@
-var preis = '25.-'
+var preis = '25.-';
 
 
 var sattel = function() {
@@ -47,6 +47,7 @@ var sattel = function() {
 
 
 document.getElementById("sattelliste").innerHTML = sattel.getSattellist(35);
+$(".preis").html(preis);
 
 /* HTML
 <div id="sattelfotos"></div>
