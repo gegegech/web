@@ -25,7 +25,6 @@ h1 {
 .title h2 {
     font-family: 'MadelynFill-Regular', 'Indie Flower', cursive;
     font-size: 275%;
-    /* padding-left: 5%; */
     line-height: 1.1;
     padding-top: 1%;
     padding-bottom: 2%;
@@ -55,7 +54,7 @@ h3 {
     position: absolute;
     left: -100px;
     top: 10%;
-    background-image: url(/images/logo-gegege3.png);
+    background-image: url(../images/logo-gegege3.png);
     background-size: cover;
     z-index: -1;
 }
