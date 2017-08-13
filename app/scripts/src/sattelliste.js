@@ -1,3 +1,6 @@
+var preis = '25.-'
+
+
 var sattel = function() {
 
     var self = this;
@@ -16,6 +19,7 @@ var sattel = function() {
         var ipad = pad3(i);
         var text = '<div class="product-wrapper">'
              + '<img src="images/sattelbezug-small/Sattelbezug-' + ipad + '.jpg" onclick="sattel.buy(\'' + ipad + '\')" class="product" />'
+             + '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + preis + '</div>'
              + '</div>\n';
         return text;
     }
