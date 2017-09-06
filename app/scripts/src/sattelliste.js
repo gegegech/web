@@ -33,6 +33,7 @@ var sattel = function() {
     self.buy = function(str) {
         var pic = '<img src="images/sattelbezug-small/Sattelbezug-' + str + '.jpg" />';
         document.getElementById("pic").innerHTML = pic;
+        document.getElementById("ArtikelNr").value = str;
         $('.form').removeClass('hidden');
 
     }
