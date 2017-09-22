@@ -77,29 +77,27 @@
         <div class="formBackground" onclick="sattel.hide();"></div>
         <!-- Das Formular beginnt hier, die folgende Zeile NICHT ändern: -->
         <form action="http://www.formular-chef.de/fc.cgi" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="_referer" value="gegege.ch">
         <input type="hidden" name="absender" value="ansgar.john@gmail.com">
+        <input type="hidden" name="_absender_feldname" value="Email">
 
-        <!-- Wir geben (zusätzlich) einen festen eMail-Empfänger an: -->
+        <!-- eMail an uns selber: -->
         <input type="hidden" name="empfaenger" value="ansgar.john@gmail.com">
-        <!-- Wir definieren einen festen Betreff: -->
         <input type="hidden" name="betreff" value="Ihre Bestellung vom ##DATUM##, ##UHRZEIT## | gegege.ch">
-        <!-- URL des E-Mail-Templates: -->
         <input type="hidden" name="email_template" value="https://gegegech.github.io/web/mail/template-email-customer.html">
 
-        <!-- Der Besucher soll eine Bestätigungsmail erhalten: -->
+        <!-- E-Mail an den Besucher: -->
         <input type="hidden" name="kopie_an_absender" value="1">
-        <!-- Der Betreff der Bestätigungsmail lautet: -->
         <input type="hidden" name="kopie_betreff" value="Herzlichen Dank für deine Bestellung!">
-        <!-- Der URL zum Template der Bestätigungsmail: -->
         <input type="hidden" name="kopie_an_absender_template" value="https://gegegech.github.io/web/mail/template-email-customer.html">
 
-        <!-- Der URL zum Antwortseiten-Template: -->
-        <input type="hidden" name="template_antwort" value="https://gegegech.github.io/web/mail/template-email-customer.html">
-        <!-- Der URL zum Fehlerseiten-Template: -->
-        <input type="hidden" name="template_fehler" value="https://gegegech.github.io/web/mail/template-email-customer.html">
+        <!-- Die URL zum Antwortseiten-Template: -->
+        <input type="hidden" name="template_antwort" value="https://gegegech.github.io/web/mail/template-page-success.html">
+        <!-- Die URL zum Fehlerseiten-Template: -->
+        <input type="hidden" name="template_fehler" value="https://gegegech.github.io/web/mail/template-page-success.html">
 
         <!-- Hier beginnen die Formular-Felder, die dem Besucher angezeigt werden: -->
-        <input type="hidden" name="ArtikelNr" id="ArtikelNr" value="004">
+        <input type="hidden" name="ArtikelNr" id="ArtikelNr" value="">
 
         <!--
             <label for="Anrede">Anrede:</label>
