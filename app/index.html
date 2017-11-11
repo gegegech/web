@@ -14,7 +14,7 @@
 <body>
     <div class="startseite">
         <div class="title">
-            <h1>Velo Sattelüberzug</h1>
+            <h1>Velosattelüberzüge</h1>
             <h2>der peppige Wasserschutz für deinen Velosattel</h2>
         </div>
         <div class="content">
@@ -81,7 +81,7 @@
     <div class="form hidden">
         <div class="formBackground" onclick="sattel.hide();"></div>
         <!-- Das Formular beginnt hier, die folgende Zeile NICHT ändern: -->
-        <form id="orderform" action="" method="post" enctype="multipart/form-data">
+        <form id="orderform" action="" method="post" enctype="multipart/form-data" onsubmit="return sattel.checkOrder()">
         <input id="referer" type="hidden" name="referer" value="">
         <!-- input type="hidden" name="_referer" value="gegege.ch" -->
         <input type="hidden" name="absender" id="absender" value="">
