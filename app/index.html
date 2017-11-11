@@ -81,14 +81,14 @@
     <div class="form hidden">
         <div class="formBackground" onclick="sattel.hide();"></div>
         <!-- Das Formular beginnt hier, die folgende Zeile NICHT ändern: -->
-        <form action="http://www.formular-chef.de/fc.cgi" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="referer" value="gegege.ch">
+        <form id="orderform" action="" method="post" enctype="multipart/form-data">
+        <input id="referer" type="hidden" name="referer" value="">
         <!-- input type="hidden" name="_referer" value="gegege.ch" -->
-        <input type="hidden" name="absender" value="info@gegege.ch">
-        <input type="hidden" name="_absender_feldname" value="Email">
+        <input type="hidden" name="absender" id="absender" value="">
+        <input type="hidden" name="_absender_feldname" id="_absender_feldname" value="">
 
         <!-- eMail an uns selber: -->
-        <input type="hidden" name="empfaenger" value="info@gegege.ch,ansgar.john@swupp.ch">
+        <input type="hidden" name="empfaenger" id="empfaenger" value="">
         <input type="hidden" name="betreff" value="Bestellung vom ##DATUM##, ##UHRZEIT## | gegege.ch">
         <input type="hidden" name="email_template" value="https://gegegech.github.io/web/mail/template-email-invoice.html">
 
@@ -104,6 +104,7 @@
 
         <!-- Hier beginnen die Formular-Felder, die dem Besucher angezeigt werden: -->
         <input type="hidden" name="ArtikelNr" id="ArtikelNr" value="">
+        <input type="hidden" name="SP" id="SP" value="">
 
         <!--
             <label for="Anrede">Anrede:</label>

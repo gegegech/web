@@ -36,6 +36,12 @@ var sattel = function() {
         document.getElementById("ArtikelNr").value = str;
         $('.form').removeClass('hidden');
 
+        document.getElementById("orderform").action = "http://www.formular-chef.de/fc.cgi";
+        document.getElementById("SP").value = 'g' + str + 'sxp';
+        document.getElementById("referer").value = "gegege.ch";
+        document.getElementById("absender").value = "info@gegege.ch";
+        document.getElementById("_absender_feldname").value = "Email";
+        document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch";
     }
 
     self.hide = function() {
