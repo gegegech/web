@@ -49,6 +49,13 @@ var sattel = function() {
 document.getElementById("sattelliste").innerHTML = sattel.getSattellist(35);
 $(".preis").html(preis);
 
+
+var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+if (!(iOS)) {
+    $('.products').addClass('pc');
+}
+
 /* HTML
 <div id="sattelfotos"></div>
 */
