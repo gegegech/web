@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bestellformular | gegege.ch</title>
+    <title>Der peppige Velo Sattelüberzug | gegege.ch</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,15 +14,15 @@
 <body>
     <div class="startseite">
         <div class="title">
-            <h1>Velo Sattelüberzug</h1>
+            <h1>Velosattelüberzüge</h1>
             <h2>der peppige Wasserschutz für deinen Velosattel</h2>
         </div>
         <div class="content">
             <div class="banner">
                 <div class="logo"></div>
-                <img class="img1" src="images/vintage_027.jpg" />
-                <img class="img2" src="images/vintage_031.jpg" />
-                <img class="img3" src="images/vintage_081.jpg" />
+                <img class="img1" src="images/vintage_049b.jpg" />
+                <img class="img2" src="images/vintage_064b.jpg" />
+                <img class="img3" src="images/Mirjam-174b.jpg" />
             </div>
             <div class="why-buy">
                 <div>
@@ -39,12 +39,18 @@
                 </div>
             </div>
             <div class="products">
-                <h3>Sofort kaufen</h3>
+                <h3>Sofort kaufen :)</h3>
+                <!-- p class="aktion">Aktion: Versandkosten gratis!</p -->
                 <div class="sattelliste" id="sattelliste"></div>
             </div>
 
             <div class="ueber">
                 <h4>Mirjam Mazza - persönlich</h4>
+                <p style="display: flex; height: 250px; width:100%; overflow: hidden;">
+                    <img class="imgMirjam" src="images/Mirjam-222b.jpg" style="height: 100%;" />
+                    <img class="imgMirjam" src="images/Mirjam-169-q.jpg" style="height: 100%;" />
+                    <img class="imgMirjam" src="images/Mirjam-204b.jpg" style="height: 100%;" />
+                </p>
 
                 <p>Ich habe meinen 40. Geburtstag schon hinter mir, bin eine Frühaufsteherin und Perfektionistin.
 
@@ -67,7 +73,7 @@
             </div>
 
             <div class="footer">
-                <div>Mirjam Mazza &nbsp;|&nbsp; Schönholzweg 24 &nbsp;|&nbsp; 8409 Winterthur &nbsp;|&nbsp; +41 52 202 02 59 &nbsp;|&nbsp; info@gegege.ch</div>
+                <div>Mirjam Mazza &nbsp;|&nbsp; Schönholzweg 24 &nbsp;|&nbsp; 8409 Winterthur &nbsp;|&nbsp; <a href="tel:+41522020259">+41 52 202 02 59</a> &nbsp;|&nbsp; <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#58;info&#064;gegege&#46;ch?Subject=Mail%20via%20gegege.ch">info&#064;gegege.ch</a></div>
                 <div><a href="https://www.facebook.com/Gegege.ch" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
             </div>
         </div>
@@ -75,29 +81,30 @@
     <div class="form hidden">
         <div class="formBackground" onclick="sattel.hide();"></div>
         <!-- Das Formular beginnt hier, die folgende Zeile NICHT ändern: -->
-        <form action="http://www.formular-chef.de/fc.cgi" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="absender" value="ansgar.john@gmail.com">
+        <form id="orderform" action="" method="post" enctype="multipart/form-data" onsubmit="return sattel.checkOrder()">
+        <input id="referer" type="hidden" name="referer" value="">
+        <!-- input type="hidden" name="_referer" value="gegege.ch" -->
+        <input type="hidden" name="absender" id="absender" value="">
+        <input type="hidden" name="_absender_feldname" id="_absender_feldname" value="">
 
-        <!-- Wir geben (zusätzlich) einen festen eMail-Empfänger an: -->
-        <input type="hidden" name="empfaenger" value="ansgar.john@gmail.com">
-        <!-- Wir definieren einen festen Betreff: -->
-        <input type="hidden" name="betreff" value="Ihre Bestellung vom ##DATUM##, ##UHRZEIT## | gegege.ch">
-        <!-- URL des E-Mail-Templates: -->
-        <input type="hidden" name="template_mail" value="https://gegegech.github.io/web/mail/template-email-customer.html">
+        <!-- eMail an uns selber: -->
+        <input type="hidden" name="empfaenger" id="empfaenger" value="">
+        <input type="hidden" name="betreff" value="Bestellung vom ##DATUM##, ##UHRZEIT## | gegege.ch">
+        <input type="hidden" name="email_template" value="https://gegegech.github.io/web/mail/template-email-invoice.html">
 
-        <!-- Der Besucher soll eine Bestätigungsmail erhalten: -->
+        <!-- E-Mail an den Besucher: -->
         <input type="hidden" name="kopie_an_absender" value="1">
-        <!-- Der Betreff der Bestätigungsmail lautet: -->
-        <input type="hidden" name="kopie_betreff" value="Vielen Dank für Ihre Bestellung">
-        <!-- Der URL zum Template der Bestätigungsmail: -->
+        <input type="hidden" name="kopie_betreff" value="Herzlichen Dank für deine Bestellung!">
         <input type="hidden" name="kopie_an_absender_template" value="https://gegegech.github.io/web/mail/template-email-customer.html">
 
-        <!-- Der URL zum Antwortseiten-Template: -->
-        <input type="hidden" name="template_antwort" value="https://gegegech.github.io/web/mail/template-email-customer.html">
-        <!-- Der URL zum Fehlerseiten-Template: -->
-        <input type="hidden" name="template_fehler" value="https://gegegech.github.io/web/mail/template-email-customer.html">
+        <!-- Die URL zum Antwortseiten-Template: -->
+        <input type="hidden" name="template_antwort" value="https://gegegech.github.io/web/mail/template-page-success.html">
+        <!-- Die URL zum Fehlerseiten-Template: -->
+        <input type="hidden" name="template_fehler" value="https://gegegech.github.io/web/mail/template-page-success.html">
 
         <!-- Hier beginnen die Formular-Felder, die dem Besucher angezeigt werden: -->
+        <input type="hidden" name="ArtikelNr" id="ArtikelNr" value="">
+        <input type="hidden" name="SP" id="SP" value="">
 
         <!--
             <label for="Anrede">Anrede:</label>
@@ -114,7 +121,8 @@
         <div id="pic"></div>
 
         <h3>Jetzt bestellen</h3>
-        <p class="preis">25.-</p>
+        <!-- p>CHF <span class="preis"></span><br>Aktion: Versandkosten gratis!</p -->
+        <p>CHF <span class="preis"></span><br> + Versand CHF 2.-</p>
         <div>
             <label for="Vorname">Vorname:</label>
             <input name="Vorname" id="Vorname" placeholder="Vorname">
@@ -147,7 +155,7 @@
 
         <div class="long">
             <label for="text">Bemerkungen:</label>
-            <textarea id="text" name="text" rows="4" cols="30" placeholder="Bemerkungen"></textarea>
+            <textarea id="Bemerkungen" name="Bemerkungen" rows="4" cols="30" placeholder="Bemerkungen"></textarea>
         </div>
 
         <div>
