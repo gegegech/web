@@ -1,4 +1,4 @@
-Anleitung für Massimo
+ANLEITUNG für Massimo
 =====================
 
 
@@ -37,6 +37,10 @@ Upload auf Server
     das Kästchen "Änderungen sofort nach origin/master pushen" muss angekreuzt sein
 13. Button Commit drücken
 
+
+
+REZEPTE
+=======
 
 
 Rezept: Neue Sattelbezüge hinzufügen
