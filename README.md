@@ -1,3 +1,66 @@
+Anleitung für Massimo
+=====================
+
+* Entwicklung: Die Quelldateien liegen in gegege.ch/app/
+* Paketierung: Für den Upload werden diese Quelldateien "kompiliert" und das Ergebnis nach gegege.ch/docs geschrieben
+* Upload: Die veränderten Quelldateien + die kompilierten Dateien müssen via SourceTree auf den Server geladen werden
+
+
+Entwicklung
+-----------
+
+in Terminal:
+
+# in das Entwicklungsverzeichnis gehen
+cd gegege.ch/
+
+# Vorschau starten
+gulp
+
+# Vorschau beenden
+[control+c]
+
+
+Paketierung
+-----------
+
+# für Upload auf Server vorbereiten
+gulp deploy
+
+
+Upload
+------
+
+in SourceTree, "Dateistatus":
+
+1. Die neuen oder veränderten Quelldateien aus app/ mit Haken markieren
+2. Die neuen oder veränderten kompilierten Sateien aus docs/ mit Haken markieren
+   (alle Javascript-Dateien werden zu docs/script/apps.js zusammengefasst)
+3. unten im Fenster die "Commit"-Beschreibung ausfüllen (was hast du gemacht?),
+   das Kästchen "Änderungen sofort nach origin/master pushen" muss angekreuzt sein
+4. Button Commit drücken
+
+
+
+
+Neue Sattelbezüge hinzufügen
+----------------------------
+
+gegege.ch/app/images/sattelbezug-large
+Bild muss 1000x1000 px gross sein, Name muss sein z.B. "Sattelbezug-037.jpg" (Gross/Klein ist auch wichtig)
+
+gegege.ch/app/images/sattelbezug-small
+Gleich wie oben, Bild muss 400x400px gross sein
+
+gegege.ch/app/scripts/src/sattelliste.js
+Zeile 89 anpassen (am Ende die Zahl ist die Nummer des letzten Sattelbezugs, ohne 0 voran):
+document.getElementById("sattelliste").innerHTML = sattel.getSattellist(37);
+
+
+
+
+
+
 Front End Gulp Boilerplate
 ==========================
 
