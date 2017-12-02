@@ -86,7 +86,7 @@ var sattel = function() {
 }();
 
 
-document.getElementById("sattelliste").innerHTML = sattel.getSattellist(37);
+document.getElementById("sattelliste").innerHTML = sattel.getSattellist(39);
 $(".preis").html(preis);
 
 
