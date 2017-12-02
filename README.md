@@ -1,62 +1,46 @@
 Anleitung für Massimo
 =====================
 
-Benötigte Software
-------------------
 
-* Texteditor TextWrangler: https://itunes.apple.com/ch/app/textwrangler/id404010395?mt=12
-* Versionsverwaltung SourceTree: https://www.sourcetreeapp.com
-* npm: https://docs.npmjs.com/getting-started/installing-node
+Vorbereitung
+------------
 
-
-Workflow
---------
-
-* Quellen updaten (falls Ansgar etwas geändert hat): SourceTree öffnen, "pull" klicken
-* Entwicklung: Die Quelldateien liegen in gegege.ch/app/
-* Paketierung: Für den Upload werden diese Quelldateien "kompiliert" und das Ergebnis nach gegege.ch/docs geschrieben
-* Upload: Die veränderten Quelldateien + die kompilierten Dateien müssen via SourceTree auf den Server geladen werden
+0. Finder -> diese Datei in TextWrangler öffnen ( Documents/gegege.ch/README.md )
+1. Lupe -> SourceTree öffnen
+2. oben links auf "Pull" klicken
 
 
 Entwicklung
 -----------
 
-in Terminal:
-
-# in das Entwicklungsverzeichnis gehen
-cd ~/Documents/gegege.ch/
-
-# Vorschau starten
-gulp
-
-# Vorschau beenden
-[control+c]
+3. Lupe -> Terminal öffnen
+4. in Terminal zum Entwicklungsverzeichnis gehen: `cd ~/Documents/gegege.ch/`
+5. in Terminal die Live-Vorschau starten: `gulp`
+6. die Quelldateien in Documents/gegege.ch/app/ nach Wunsch ändern (z.B. Bilder hinzufügen, Javascript anpassen, ... - gemäss "Rezept" unten)
+7. wenn fertig: in Terminal die Live-Vorschau beenden: [control+c]
 
 
 Paketierung
 -----------
 
-# für Upload auf Server vorbereiten
-gulp deploy
+8. in Terminal Paketierung durchführen: `gulp deploy`
 
 
-Upload
-------
+Upload auf Server
+-----------------
 
-in SourceTree, "Dateistatus":
-
-1. Die neuen oder veränderten Quelldateien aus app/ mit Haken markieren
-2. Die neuen oder veränderten kompilierten Sateien aus docs/ mit Haken markieren
-   (alle Javascript-Dateien werden zu docs/script/apps.js zusammengefasst)
-3. unten im Fenster die "Commit"-Beschreibung ausfüllen (was hast du gemacht?),
-   das Kästchen "Änderungen sofort nach origin/master pushen" muss angekreuzt sein
-4. Button Commit drücken
-
+9.  in SourceTree sicherstellen, dass oben links "Dateistatus" markiert ist
+10. Die neuen oder veränderten Quelldateien aus app/ mit Haken markieren
+11. Die neuen oder veränderten kompilierten Sateien aus docs/ mit Haken markieren
+    (alle Javascript-Dateien werden zu docs/script/apps.js zusammengefasst)
+12. unten im Fenster die "Commit"-Beschreibung ausfüllen (was hast du gemacht?),
+    das Kästchen "Änderungen sofort nach origin/master pushen" muss angekreuzt sein
+13. Button Commit drücken
 
 
 
-Neue Sattelbezüge hinzufügen
-----------------------------
+Rezept: Neue Sattelbezüge hinzufügen
+------------------------------------
 
 im Finder: Bilder kopieren ins Verzeichnis Documents/gegege.ch/app/images/sattelbezug-large
 Bild muss 1000x1000 px gross sein, Name muss sein z.B. "Sattelbezug-037.jpg" (Gross/Klein ist auch wichtig)
@@ -71,6 +55,16 @@ document.getElementById("sattelliste").innerHTML = sattel.getSattellist(37);
 
 
 
+
+
+
+
+Benötigte Software
+==========================
+
+* Texteditor TextWrangler: https://itunes.apple.com/ch/app/textwrangler/id404010395?mt=12
+* Versionsverwaltung SourceTree: https://www.sourcetreeapp.com
+* npm: https://docs.npmjs.com/getting-started/installing-node
 
 
 Front End Gulp Boilerplate
