@@ -1,6 +1,18 @@
 Anleitung für Massimo
 =====================
 
+Benötigte Software
+------------------
+
+* Texteditor TextWrangler: https://itunes.apple.com/ch/app/textwrangler/id404010395?mt=12
+* Versionsverwaltung SourceTree: https://www.sourcetreeapp.com
+* npm: https://docs.npmjs.com/getting-started/installing-node
+
+
+Workflow
+--------
+
+* Quellen updaten (falls Ansgar etwas geändert hat): SourceTree öffnen, "pull" klicken
 * Entwicklung: Die Quelldateien liegen in gegege.ch/app/
 * Paketierung: Für den Upload werden diese Quelldateien "kompiliert" und das Ergebnis nach gegege.ch/docs geschrieben
 * Upload: Die veränderten Quelldateien + die kompilierten Dateien müssen via SourceTree auf den Server geladen werden
@@ -12,7 +24,7 @@ Entwicklung
 in Terminal:
 
 # in das Entwicklungsverzeichnis gehen
-cd gegege.ch/
+cd ~/Documents/gegege.ch/
 
 # Vorschau starten
 gulp
@@ -46,13 +58,13 @@ in SourceTree, "Dateistatus":
 Neue Sattelbezüge hinzufügen
 ----------------------------
 
-gegege.ch/app/images/sattelbezug-large
+im Finder: Bilder kopieren ins Verzeichnis Documents/gegege.ch/app/images/sattelbezug-large
 Bild muss 1000x1000 px gross sein, Name muss sein z.B. "Sattelbezug-037.jpg" (Gross/Klein ist auch wichtig)
 
-gegege.ch/app/images/sattelbezug-small
+im Finder: Bilder kopieren ins Verzeichnis Documents/gegege.ch/app/images/sattelbezug-small
 Gleich wie oben, Bild muss 400x400px gross sein
 
-gegege.ch/app/scripts/src/sattelliste.js
+die Datei Documents/gegege.ch/app/scripts/src/sattelliste.js in Textwrangler öffnen:
 Zeile 89 anpassen (am Ende die Zahl ist die Nummer des letzten Sattelbezugs, ohne 0 voran):
 document.getElementById("sattelliste").innerHTML = sattel.getSattellist(37);
 
