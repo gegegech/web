@@ -53,8 +53,7 @@ im Finder: Bilder kopieren ins Verzeichnis Documents/gegege.ch/app/images/sattel
 Gleich wie oben, Bild muss 400x400px gross sein
 
 die Datei Documents/gegege.ch/app/scripts/src/sattelliste.js in Textwrangler öffnen:
-Zeile 89 anpassen (am Ende die Zahl ist die Nummer des letzten Sattelbezugs, ohne 0 voran):
-document.getElementById("sattelliste").innerHTML = sattel.getSattellist(37);
+Die Liste (ab Zeile 12) anpassen und speichern.
 
 
 
