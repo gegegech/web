@@ -32,6 +32,7 @@ gulp.task('browserSync', function() {
 });
 
 
+/*
 //compressing images & handle SVG files
 gulp.task('images', function(tmp) {
     gulp.src(['app/images/*.jpg', 'app/images/*.png'])
@@ -40,6 +41,7 @@ gulp.task('images', function(tmp) {
         .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
         .pipe(gulp.dest('app/images'));
 });
+*/
 
 //compressing images & handle SVG files
 gulp.task('images-deploy', function() {
