@@ -10,55 +10,54 @@ var sattel = function() {
         Liste aller Sattelbilder. Die Bilder müssen im Namensformat 'Sattelbezug-038.jpg' vorliegen.
     */
     self.liste = [
-        "038",  // rot Schweizerkreuze
-        // "00X",  // Beispiel: wenn vorne "//" steht, kommt dieser Sattel nicht mehr auf der Webseite
-        "001",
-        "002",
-        "003",
-        "004",
-        "005",
-        "006",
-        "007",
-        "008",
-        "009",
-        "010",
-        "011",
-        "012",
-        "013",
-        "014",
-        "015",
-        "016",
-        "017",
-        "018",
-        "019",
-        "020",
-        "021",
-        "022",
-        "023",
-        "024",
-        "025",
-        "026",
-        "027",
-        "028",
-        "029",
-        "030",
-        "031",
-        "032",
-        "033",
-        "034",
-        "035",  // schwarz
-        "036",  // schwarz-weiss Scherenschnitt
-        "037",
-        "039",
-        "040",
-        "041",
-        "042",
-        "043",
-        "044",
-        "045",
-        "046",
-        "047",
-        "048"
+"001",	//	1	rosa
+"002",	//	1	rosa
+"003",	//	1	rosa
+"004",	//	1	rosa
+"005",	//	1	rosa
+"006",	//	1	rosa
+"007",	//	1	rosa
+"008",	//	1	rosa
+"043",	//	1	rosa
+"044",	//	1	rosa
+"045",	//	1	rosa
+"047",	//	1	rosa
+"009",	//	2	rot
+"010",	//	2	rot
+// "011",	//	2	rot
+"012",	//	2	rot
+"013",	//	2	rot
+"014",	//	2	rot
+"038",	//	2	rot
+"040",	//	2	rot
+"041",	//	2	rot
+"015",	//	3	grün
+"016",	//	3	grün
+"017",	//	3	grün
+"018",	//	3	grün
+"019",	//	3	grün
+"039",	//	3	grün
+"046",	//	3	grün
+// "020",	//	4	blau
+// "021",	//	4	blau
+// "022",	//	4	blau
+"023",	//	4	blau
+// "024",	//	4	blau
+"025",	//	4	blau
+"026",	//	4	blau
+"027",	//	4	blau
+"028",	//	4	blau
+"029",	//	4	blau
+"030",	//	4	blau
+"037",	//	4	blau
+"048",	//	4	blau
+// "031",	//	5	andere  (wenn vorne "//" steht, kommt dieser Sattel nicht mehr auf der Webseite)
+"032",	//	5	andere
+"033",	//	5	andere
+"034",	//	5	andere
+"035",	//	5	andere
+"036",	//	5	andere
+"042"	//	5	andere
     ];
 
 
