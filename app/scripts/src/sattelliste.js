@@ -12,14 +12,14 @@ var sattel = function() {
     self.liste = [
 "001",	//	1	rosa
 "002",	//	1	rosa
-"003",	//	1	rosa
+// "003",	//	1	rosa
 "004",	//	1	rosa
-"005",	//	1	rosa
+// "005",	//	1	rosa
 "006",	//	1	rosa
 "007",	//	1	rosa
 "008",	//	1	rosa
 "043",	//	1	rosa
-"044",	//	1	rosa
+"044",	//	1	blau
 "045",	//	1	rosa
 "047",	//	1	rosa
 "009",	//	2	rot
@@ -35,7 +35,7 @@ var sattel = function() {
 "016",	//	3	grün
 "017",	//	3	grün
 "018",	//	3	grün
-"019",	//	3	grün
+// "019",	//	3	grün
 "039",	//	3	grün
 "046",	//	3	grün
 // "020",	//	4	blau
