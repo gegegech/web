@@ -22,6 +22,9 @@ var sattel = function() {
 "044",	//	1	blau
 "045",	//	1	rosa
 "047",	//	1	rosa
+"049",	//	1	rosa
+"053",	//	1	rosa
+"058",	//	1	rosa
 "009",	//	2	rot
 "010",	//	2	rot
 // "011",	//	2	rot
@@ -31,10 +34,12 @@ var sattel = function() {
 "038",	//	2	rot
 "040",	//	2	rot
 "041",	//	2	rot
+"059",	//	3	grün
 "015",	//	3	grün
 "016",	//	3	grün
 "017",	//	3	grün
 "018",	//	3	grün
+"054",	//	3	grün
 // "019",	//	3	grün
 "039",	//	3	grün
 "046",	//	3	grün
@@ -51,13 +56,21 @@ var sattel = function() {
 "030",	//	4	blau
 "037",	//	4	blau
 "048",	//	4	blau
+"050",	//	4	blau
+"055",	//	4	blau
+"056",	//	4	blau
+"057",	//	4	blau
+"061",	//	4	blau
 // "031",	//	5	andere  (wenn vorne "//" steht, kommt dieser Sattel nicht mehr auf der Webseite)
 "032",	//	5	andere
 "033",	//	5	andere
 "034",	//	5	andere
 "035",	//	5	andere
 "036",	//	5	andere
-"042"	//	5	andere
+"051",	//	5	andere
+"052",	//	5	andere
+"042",	//	5	andere
+"059",	//	5	andere
     ];
 
 
