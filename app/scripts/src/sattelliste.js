@@ -10,7 +10,7 @@ var sattel = function() {
         Liste aller Sattelbilder. Die Bilder müssen im Namensformat 'Sattelbezug-038.jpg' vorliegen.
     */
     self.liste = [
-"001",	//	1	rosa
+//"001",	//	1	rosa
 "002",	//	1	rosa
 // "003",	//	1	rosa
 // "004",	//	1	rosa
@@ -21,7 +21,7 @@ var sattel = function() {
 "043",	//	1	rosa
 "044",	//	1	blau
 "045",	//	1	rosa
-"047",	//	1	rosa
+//"047",	//	1	rosa
 "049",	//	1	rosa
 "053",	//	1	rosa
 "058",	//	1	rosa
