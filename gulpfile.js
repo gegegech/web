@@ -32,16 +32,16 @@ gulp.task('browserSync', function() {
 });
 
 
-/*
 //compressing images & handle SVG files
 gulp.task('images', function(tmp) {
+/* we do not want to do anything on source images in app/images
     gulp.src(['app/images/*.jpg', 'app/images/*.png'])
         //prevent pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
         .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
         .pipe(gulp.dest('app/images'));
-});
 */
+});
 
 //compressing images & handle SVG files
 gulp.task('images-deploy', function() {
