@@ -108,6 +108,7 @@
 
         <!-- Hier beginnen die Formular-Felder, die dem Besucher angezeigt werden: -->
         <input type="hidden" name="ArtikelNr" id="ArtikelNr" value="">
+        <input type="hidden" name="glockeNr" id="glockeNr" value="">
         <input type="hidden" name="SP" id="SP" value="">
 
         <input type="hidden" name="preis" id="preis" value="">
@@ -127,6 +128,17 @@
         <i class="close fa fa-times" aria-hidden="true" onclick="sattel.hide();"></i>
 
         <div id="pic"></div>
+
+        <h3>Auswahl</h3>
+
+        <div>
+            <input type="button" class="selectButton selectionSattel" value="nur Sattelbezug" onclick="sattel.buy()">
+            <input type="button" class="selectButton selectionSetSattelGlocke" value="Set mit Veloglocke" onclick="SetSattelGlocke.buy()">
+        </div>
+        <div>
+            <input type="button" class="selectButton selectionGlocke" value="nur Veloglocke" onclick="glocke.buy()">
+        </div>
+
 
         <h3>Jetzt bestellen</h3>
         <!-- p>CHF <span class="preis"></span><br>Aktion: Versandkosten gratis!</p -->

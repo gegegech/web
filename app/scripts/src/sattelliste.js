@@ -96,9 +96,11 @@ var sattel = new function() {
 
 
     self.buy = function(str) {
+        str = str || document.getElementById("ArtikelNr").value;  // if ArtikelNr is not set (this is the case if buttons in form are pressed), read it from the form
         var pic = '<img src="images/sattelbezug-small/Sattelbezug-' + str + '.jpg" />';
         document.getElementById("pic").innerHTML = pic;
         document.getElementById("ArtikelNr").value = str;
+        document.getElementById("glockeNr").value = "";
         // document.getElementById("preis").value = self.preis;
         // document.getElementById("preisVersand").value = self.preisVersand;
         // document.getElementById("preisTotal").value = self.preisTotal;
@@ -108,6 +110,8 @@ var sattel = new function() {
         document.getElementById("template_fehler").value = "https://gegegech.github.io/web/mail/template-page-success.html";
         $("#preisOrderForm").html(self.preis);
         $("#preisOrderFormVersand").html(self.preisVersand);
+        $('input.selectButton').removeClass('selected');
+        $('input.selectionSattel').addClass('selected');
         $('.form').removeClass('hidden');
 
         document.getElementById("orderform").action = "http://www.formular-chef.de/fc.cgi";

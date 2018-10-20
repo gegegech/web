@@ -1,89 +1,32 @@
-var glocke = new function() {
+var SetSattelGlocke = new function() {
 
     var self = this;
 
-    self.preis = '14.-';
+    self.preis = '35.-';
     self.preisVersand = '9.-';
-    self.preisTotal = '23.-';
-
-    /*
-        Liste aller Glockebilder. Die Bilder müssen im Namensformat 'Glockebezug-038.jpg' vorliegen.
-    */
-    self.liste = [
-"006",	//	1	pimp my bike
-// "001",	//	1	rosa
-"002",	//	1	rosa
-// "003",	//	1	rosa
-// "004",	//	1	rosa
-// "005",	//	1	rosa
-"007",	//	1	rosa
-"043",	//	1	rosa
-"045",	//	1	rosa
-// "047",	//	1	rosa
-"049",	//	1	rosa
-// "011",	//	2	rot
-"013",	//	2	rot
-"038",	//	2	rot
-"040",	//	2	rot
-"059",	//	3	grün
-"015",	//	3	grün
-"016",	//	3	grün
-"054",	//	3	grün
-// "019",	//	3	grün
-// "020",	//	4	blau
-// "021",	//	4	blau
-// "022",	//	4	blau
-"023",	//	4	blau
-// "024",	//	4	blau
-"027",	//	4	blau
-"029",	//	4	blau
-"030",	//	4	blau
-"044",	//	1	blau
-// "031",	//	5	andere  (wenn vorne "//" steht, kommt dieser Sattel nicht mehr auf der Webseite)
-"032",	//	5	andere
-"033",	//	5	andere
-"036",	//	5	andere
-// "059",	//	5	andere
-    ];
-
-
-    self.getGlockelist = function() {
-        var text = '';
-        for (var i in self.liste) {
-            text += getHtml(self.liste[i]);
-        }
-        return text;
-    }
-
-
-    getHtml = function(ipad) {
-        var text = '<div class="product-wrapper" onclick="glocke.buy(\'' + ipad + '\')" class="product">'
-             + '<img src="images/glocke-small/Veloglocke-' + ipad + '.jpg" />'
-             + '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + self.preis + '</div>'
-             // + (sattel.liste.indexOf(ipad) > -1) ? '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + MATCH + '</div>'
-             //   : '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + self.preis + '</div>'
-             + '</div>\n';
-        return text;
-    }
+    self.preisTotal = '44.-';
 
 
     self.buy = function(str) {
         str = str || document.getElementById("ArtikelNr").value;  // if ArtikelNr is not set (this is the case if buttons in form are pressed), read it from the form
-        var pic = '<img src="images/glocke-small/Veloglocke-' + str + '.jpg" />';
+        var glockeNr = (glocke.liste.indexOf(str) == -1)  ?  "006"  :  str;
+        var pic = '<img src="images/sattelbezug-small/Sattelbezug-' + str + '.jpg" />'
+                + '<div class="glockeZumBezug"><img src="images/glocke-small/Veloglocke-' + glockeNr + '.jpg" /></div>'
+        ;
         document.getElementById("pic").innerHTML = pic;
         document.getElementById("ArtikelNr").value = str;
-        document.getElementById("glockeNr").value = "";
+        document.getElementById("glockeNr").value = glockeNr;
         // document.getElementById("preis").value = self.preis;
         // document.getElementById("preisVersand").value = self.preisVersand;
         // document.getElementById("preisTotal").value = self.preisTotal;
-        document.getElementById("email_template").value = "https://gegegech.github.io/web/mail/templateGlocke-email-invoice.html";
-        document.getElementById("kopie_an_absender_template").value = "https://gegegech.github.io/web/mail/templateGlocke-email-customer.html";
-        document.getElementById("template_antwort").value = "https://gegegech.github.io/web/mail/templateGlocke-page-success.html";
-        document.getElementById("template_fehler").value = "https://gegegech.github.io/web/mail/templateGlocke-page-success.html";
+        document.getElementById("email_template").value = "https://gegegech.github.io/web/mail/templateSet-email-invoice.html";
+        document.getElementById("kopie_an_absender_template").value = "https://gegegech.github.io/web/mail/templateSet-email-customer.html";
+        document.getElementById("template_antwort").value = "https://gegegech.github.io/web/mail/templateSet-page-success.html";
+        document.getElementById("template_fehler").value = "https://gegegech.github.io/web/mail/templateSet-page-success.html";
         $("#preisOrderForm").html(self.preis);
         $("#preisOrderFormVersand").html(self.preisVersand);
         $('input.selectButton').removeClass('selected');
-        $('input.selectionGlocke').addClass('selected');
+        $('input.selectionSetSattelGlocke').addClass('selected');
         $('.form').removeClass('hidden');
 
         document.getElementById("orderform").action = "http://www.formular-chef.de/fc.cgi";
@@ -94,6 +37,7 @@ var glocke = new function() {
         document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch";
     }
 
+/*
     self.hide = function() {
          $('.form').addClass('hidden');
     }
@@ -131,21 +75,7 @@ var glocke = new function() {
         }
         return true;
     }
+*/
 
     return self;
 }();
-
-
-document.getElementById("glockeliste").innerHTML = glocke.getGlockelist();
-$(".preisGlocke").html(glocke.preis);
-
-
-var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-if (!(iOS)) {
-    $('.products').addClass('pc');
-}
-
-/* HTML
-<div id="glockefotos"></div>
-*/
