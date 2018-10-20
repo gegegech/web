@@ -87,7 +87,9 @@ var sattel = new function() {
         var text = '<div class="product-wrapper" onclick="sattel.buy(\'' + ipad + '\')" class="product">'
              + '<img src="images/sattelbezug-small/Sattelbezug-' + ipad + '.jpg" />'
              + '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + self.preis + '</div>'
-             + ((glocke.liste.indexOf(ipad) == -1) ? '' : '<div class="glockeZumBezug"><img src="images/glocke-small/Veloglocke-' + ipad + '.jpg" /></div>')
+             + ((glocke.liste.indexOf(ipad) == -1)
+                ? '<div class="glockeZumBezug"><img src="images/glocke-small/Veloglocke-006.jpg" /></div>'
+                : '<div class="glockeZumBezug"><img src="images/glocke-small/Veloglocke-' + ipad + '.jpg" /></div>')
              + '</div>\n';
         return text;
     }
