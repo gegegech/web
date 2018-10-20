@@ -44,6 +44,12 @@
                 <div class="sattelliste" id="sattelliste"></div>
             </div>
 
+            <div class="products">
+                <h3>Passende Veloglocke</h3>
+                <!-- p class="aktion">Aktion: Versandkosten gratis!</p -->
+                <div class="sattelliste" id="glockeliste"></div>
+            </div>
+
             <div class="ueber">
                 <h4>Mirjam Mazza - persönlich</h4>
                 <p style="display: flex; height: 250px; width:100%; overflow: hidden;">
@@ -52,24 +58,18 @@
                     <img class="imgMirjam" src="images/Mirjam-204b.jpg" style="height: 100%;" />
                 </p>
 
-                <p>Ich habe meinen 40. Geburtstag schon hinter mir, bin eine Frühaufsteherin und Perfektionistin.
+                <p>Das Velo ist mehr als nur ein Fortbewegungsmittel, es bedeutet Freiheit, es ist kultig, weckt Emotionen und ist purer Lifestyle.</p>
 
-                Meine Stärken sind: ich kann gut zuhören, über mich selber lachen und mich an Kleinigkeiten freuen.
+                <p>In meiner kleinen Manufaktur in Winterthur nähe ich seit sieben Jahren einzigartige, bunte, wasserabstossende Sattelüberzüge.
+                Neu im Sortiment habe ich auch dazu passende Veloglocken.
+                Ob mit Blumen, Sternen, Vögeln, Melonen, einem Schweizerkreuz oder Edelweiss, ob mit geometrischen oder Retro Mustern -
+                bei mir findet jeder einen passenden GEGEGE-Bezug, um seinem Velo, ob alt oder neu, eine ganz persönliche Note zu geben.</p>
 
-                Zu mir gehören mein wundervoller Ehemann Massimo und meine zwei tollen Teenager.
-                    Ich bin ein Familienmensch und geniessen anregende Gespräche, mag lebhafte und arbeitsreiche Zeiten ebenso Momente der Stille wo ich meinem Schöpfer begegnen kann.
-                </p>
+                <p>Bestellen kannst du direkt über meine Homepage, oder einen Teil des Sortiments in einer der zwanzig auserwählten Boutiquen und Veloläden kaufen.</p>
 
-                <p>Meine freie Zeit verbringe ich gerne mit Familie, Freunden und authentischen Menschen.
+                <p>Vielleicht führst du selber einen Laden oder eine Boutique und meine Produkte gefallen dir.
+                Das würde mich sehr freuen! Schick mir doch eine E-Mail, damit ich dir eine Infobroschüre mit den Konditionen für den Wiederverkauf senden kann.</p>
 
-                Schwach werde ich bei der asiatische Küche, Rucola, Kaffee und Schokolade.
-
-                Glücklich macht mich das Rattern meiner Nähmaschine, schöne Schuhe, der Duft von frischer Wäsche und Ausflüge mit meinem Drahtesel.
-
-                Was ich nicht mag sind Menschen die schlecht über andere reden, Smalltalk, Schlafmangel und Technische Probleme.
-
-                Dankbar bin ich für meine Begabungen und das mir im Leben anvertraue. Darum will ich meine Zeit sinnvoll einsetzten, meine Kinder prägen und meine Gaben zum Wohle meiner Mitmenschen einsetzen.
-                </p>
             </div>
 
             <div class="footer">
@@ -94,21 +94,25 @@
         <!-- eMail an uns selber: -->
         <input type="hidden" name="empfaenger" id="empfaenger" value="">
         <input type="hidden" name="betreff" value="Bestellung vom ##DATUM##, ##UHRZEIT## | gegege.ch">
-        <input type="hidden" name="email_template" value="https://gegegech.github.io/web/mail/template-email-invoice.html">
+        <input type="hidden" name="email_template" id="email_template" value="https://gegegech.github.io/web/mail/template-email-invoice.html">
 
         <!-- E-Mail an den Besucher: -->
         <input type="hidden" name="kopie_an_absender" value="1">
         <input type="hidden" name="kopie_betreff" value="Herzlichen Dank fuer deine Bestellung!">
-        <input type="hidden" name="kopie_an_absender_template" value="https://gegegech.github.io/web/mail/template-email-customer.html">
+        <input type="hidden" name="kopie_an_absender_template" id="kopie_an_absender_template" value="https://gegegech.github.io/web/mail/template-email-customer.html">
 
         <!-- Die URL zum Antwortseiten-Template: -->
-        <input type="hidden" name="template_antwort" value="https://gegegech.github.io/web/mail/template-page-success.html">
+        <input type="hidden" name="template_antwort" id="template_antwort" value="https://gegegech.github.io/web/mail/template-page-success.html">
         <!-- Die URL zum Fehlerseiten-Template: -->
-        <input type="hidden" name="template_fehler" value="https://gegegech.github.io/web/mail/template-page-success.html">
+        <input type="hidden" name="template_fehler" id="template_fehler" value="https://gegegech.github.io/web/mail/template-page-success.html">
 
         <!-- Hier beginnen die Formular-Felder, die dem Besucher angezeigt werden: -->
         <input type="hidden" name="ArtikelNr" id="ArtikelNr" value="">
         <input type="hidden" name="SP" id="SP" value="">
+
+        <input type="hidden" name="preis" id="preis" value="">
+        <input type="hidden" name="preisVersand" id="preisVersand" value="">
+        <input type="hidden" name="preisTotal" id="preisTotal" value="">
 
         <!--
             <label for="Anrede">Anrede:</label>
@@ -126,7 +130,7 @@
 
         <h3>Jetzt bestellen</h3>
         <!-- p>CHF <span class="preis"></span><br>Aktion: Versandkosten gratis!</p -->
-        <p>CHF <span class="preis"></span><br> + Versand CHF 2.-</p>
+        <p>CHF <span class="preis" id="preisOrderForm"></span><br> + Versand CHF <span id="preisOrderFormVersand">2.-</span> (A-Post)</p>
         <div>
             <label for="Vorname">Vorname:</label>
             <input name="Vorname" id="Vorname" placeholder="Vorname">

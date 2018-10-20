@@ -1,10 +1,10 @@
-var preis = '25.-';
-
-
-var sattel = function() {
+var sattel = new function() {
 
     var self = this;
 
+    self.preis = '25.-';
+    self.preisVersand = '2.-';
+    self.preisTotal = '27.-';
 
     /*
         Liste aller Sattelbilder. Die Bilder müssen im Namensformat 'Sattelbezug-038.jpg' vorliegen.
@@ -19,7 +19,6 @@ var sattel = function() {
 "007",	//	1	rosa
 "008",	//	1	rosa
 "043",	//	1	rosa
-"044",	//	1	blau
 "045",	//	1	rosa
 // "047",	//	1	rosa
 "049",	//	1	rosa
@@ -55,6 +54,7 @@ var sattel = function() {
 "029",	//	4	blau
 "030",	//	4	blau
 "037",	//	4	blau
+"044",	//	1	blau
 "048",	//	4	blau
 "050",	//	4	blau
 "055",	//	4	blau
@@ -70,7 +70,7 @@ var sattel = function() {
 "051",	//	5	andere
 "052",	//	5	andere
 "042",	//	5	andere
-"059",	//	5	andere
+// "059",	//	5	andere
     ];
 
 
@@ -86,7 +86,8 @@ var sattel = function() {
     getHtml = function(ipad) {
         var text = '<div class="product-wrapper" onclick="sattel.buy(\'' + ipad + '\')" class="product">'
              + '<img src="images/sattelbezug-small/Sattelbezug-' + ipad + '.jpg" />'
-             + '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + preis + '</div>'
+             + '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + self.preis + '</div>'
+             + ((glocke.liste.indexOf(ipad) == -1) ? '' : '<div class="glockeZumBezug"><img src="images/glocke-small/Veloglocke-' + ipad + '.jpg" /></div>')
              + '</div>\n';
         return text;
     }
@@ -96,6 +97,15 @@ var sattel = function() {
         var pic = '<img src="images/sattelbezug-small/Sattelbezug-' + str + '.jpg" />';
         document.getElementById("pic").innerHTML = pic;
         document.getElementById("ArtikelNr").value = str;
+        // document.getElementById("preis").value = self.preis;
+        // document.getElementById("preisVersand").value = self.preisVersand;
+        // document.getElementById("preisTotal").value = self.preisTotal;
+        document.getElementById("email_template").value = "https://gegegech.github.io/web/mail/template-email-invoice.html";
+        document.getElementById("kopie_an_absender_template").value = "https://gegegech.github.io/web/mail/template-email-customer.html";
+        document.getElementById("template_antwort").value = "https://gegegech.github.io/web/mail/template-page-success.html";
+        document.getElementById("template_fehler").value = "https://gegegech.github.io/web/mail/template-page-success.html";
+        $("#preisOrderForm").html(self.preis);
+        $("#preisOrderFormVersand").html(self.preisVersand);
         $('.form').removeClass('hidden');
 
         document.getElementById("orderform").action = "http://www.formular-chef.de/fc.cgi";
@@ -149,7 +159,7 @@ var sattel = function() {
 
 
 document.getElementById("sattelliste").innerHTML = sattel.getSattellist();
-$(".preis").html(preis);
+$(".preis").html(sattel.preis);
 
 
 var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
