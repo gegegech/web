@@ -30,6 +30,7 @@ var sattel = new function() {
 "058",	//	1	rosa
 // "064",	//	1	rosa
 "078",	//	1	rosa
+"075",	//	1	rosa
 "009",	//	2	rot
 // "010",	//	2	rot
 // "011",	//	2	rot
@@ -90,6 +91,8 @@ var sattel = new function() {
 "062",	//	5	andere
 "052",	//	5	andere
 "042",	//	5	andere
+"074",	//	5	andere
+"076",	//	5	andere
 // "059",	//	5	andere
     ];
 
