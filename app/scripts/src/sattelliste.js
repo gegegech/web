@@ -21,7 +21,7 @@ var sattel = new function() {
 "043",	//	1	rosa
 // "072",	//	1	rosa
 "086",	//	1	rosa
-// "073",	//	1	rosa
+"073",	//	1	rosa
 "087",	//	1	rosa
 "045",	//	1	rosa
 // "047",	//	1	rosa
