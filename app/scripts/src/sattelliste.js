@@ -66,7 +66,7 @@ var sattel = new function() {
         { "Sattel": "035", "Glocke": "006", "Bem": "5 andere" },
         { "Sattel": "036", "Glocke": "036", "Bem": "5 andere" },
         { "Sattel": "051", "Glocke": "006", "Bem": "5 andere" },
-        { "Sattel": "062", "Glocke": "062", "Bem": "5 andere" },
+        { "Sattel": "062", "Glocke": "006", "Bem": "5 andere" },
         { "Sattel": "052", "Glocke": "006", "Bem": "5 andere" },
         { "Sattel": "042", "Glocke": "006", "Bem": "5 andere" },
         { "Sattel": "074", "Glocke": "006", "Bem": "5 andere" },
