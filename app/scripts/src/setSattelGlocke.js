@@ -7,15 +7,18 @@ var SetSattelGlocke = new function() {
     self.preisTotal = '44.-';
 
 
-    self.buy = function(str) {
-        str = str || document.getElementById("ArtikelNr").value;  // if ArtikelNr is not set (this is the case if buttons in form are pressed), read it from the form
-        var glockeNr = (glocke.liste.indexOf(str) == -1)  ?  "006"  :  str;
-        var pic = '<img src="images/sattelbezug-small/Sattelbezug-' + str + '.jpg" />'
-                + '<div class="glockeZumBezug"><img src="images/glocke-small/Veloglocke-' + glockeNr + '.jpg" /></div>'
+    self.buy = function(bundle) {
+        if(bundle) {
+            global.selected = JSON.parse(unescape(bundle));
+        }
+        else {  // buttons in form are pressed
+        }
+        var pic = '<img src="images/sattelbezug-large/Sattelbezug-' + global.selected.Sattel + '.jpg" />'
+                + '<div class="glockeZumBezug"><img src="images/glocke-small/Veloglocke-' + global.selected.Glocke + '.jpg" /></div>'
         ;
         document.getElementById("pic").innerHTML = pic;
-        document.getElementById("ArtikelNr").value = str;
-        document.getElementById("glockeNr").value = glockeNr;
+        document.getElementById("ArtikelNr").value = global.selected.Sattel;
+        document.getElementById("glockeNr").value = global.selected.Glocke;
         // document.getElementById("preis").value = self.preis;
         // document.getElementById("preisVersand").value = self.preisVersand;
         // document.getElementById("preisTotal").value = self.preisTotal;
@@ -30,7 +33,7 @@ var SetSattelGlocke = new function() {
         $('.form').removeClass('hidden');
 
         document.getElementById("orderform").action = "http://www.formular-chef.de/fc.cgi";
-        document.getElementById("SP").value = 'g' + str + 'sxp';
+        document.getElementById("SP").value = 'g' + global.selected.Sattel + 'sxp';
         document.getElementById("referer").value = "gegege.ch";
         document.getElementById("absender").value = "info@gegege.ch";
         document.getElementById("_absender_feldname").value = "Email";

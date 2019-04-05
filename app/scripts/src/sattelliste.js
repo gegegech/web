@@ -1,3 +1,6 @@
+var global = { selected: { sattel: "", glocke: ""} };
+
+
 var sattel = new function() {
 
     var self = this;
@@ -6,94 +9,68 @@ var sattel = new function() {
     self.preisVersand = '2.-';
     self.preisTotal = '27.-';
 
-    /*
-        Liste aller Sattelbilder. Die Bilder müssen im Namensformat 'Sattelbezug-038.jpg' vorliegen.
-    */
     self.liste = [
-// "001",	//	1	rosa
-"002",	//	1	rosa
-// "003",	//	1	rosa
-// "004",	//	1	rosa
-// "005",	//	1	rosa
-"006",	//	1	rosa
-"007",	//	1	rosa
-// "008",	//	1	rosa
-"043",	//	1	rosa
-// "072",	//	1	rosa
-"086",	//	1	rosa
-"073",	//	1	rosa
-"087",	//	1	rosa
-"045",	//	1	rosa
-// "047",	//	1	rosa
-"049",	//	1	rosa
-"053",	//	1	rosa
-"058",	//	1	rosa
-// "064",	//	1	rosa
-"078",	//	1	rosa
-"075",	//	1	rosa
-"009",	//	2	rot
-// "010",	//	2	rot
-// "011",	//	2	rot
-"012",	//	2	rot
-"013",	//	2	rot
-"014",	//	2	rot
-"038",	//	2	rot
-"040",	//	2	rot
-"041",	//	2	rot
-// "065",	//	2	rot
-"079",	//	2	rot
-// "071",	//	2	rot
-"085",	//	2	rot
-// "070",	//	3	grün
-"084",	//	3	grün
-"059",	//	3	grün
-"015",	//	3	grün
-"016",	//	3	grün
-"017",	//	3	grün
-"018",	//	3	grün
-"054",	//	3	grün
-// "063",	//	3	grün
-"077",	//	3	grün
-// "066",	//	3	grün
-"080",	//	3	grün
-// "067",	//	3	grün
-"081",	//	3	grün
-// "068",	//	3	grün
-"082",	//	3	grün
-"039",	//	3	grün
-"046",	//	3	grün
-// "020",	//	4	blau
-// "021",	//	4	blau
-// "022",	//	4	blau
-"023",	//	4	blau
-// "024",	//	4	blau
-"025",	//	4	blau
-"026",	//	4	blau
-"027",	//	4	blau
-"028",	//	4	blau
-"029",	//	4	blau
-"030",	//	4	blau
-"037",	//	4	blau
-"044",	//	1	blau
-"048",	//	4	blau
-"050",	//	4	blau
-"055",	//	4	blau
-"056",	//	4	blau
-"057",	//	4	blau
-"061",	//	4	blau
-// "031",	//	5	andere  (wenn vorne "//" steht, kommt dieser Sattel nicht mehr auf der Webseite)
-"032",	//	5	andere
-"033",	//	5	andere
-"034",	//	5	andere
-"035",	//	5	andere
-"036",	//	5	andere
-"051",	//	5	andere
-"062",	//	5	andere
-"052",	//	5	andere
-"042",	//	5	andere
-"074",	//	5	andere
-"076",	//	5	andere
-// "059",	//	5	andere
+        // Liste aller Sattelbilder. Die Bilder müssen im Namensformat 'Sattelbezug-038.jpg' vorliegen.
+        { "Sattel": "002", "Glocke": "002", "Bem": "1 rosa" },
+        { "Sattel": "006", "Glocke": "006", "Bem": "1 rosa" },
+        { "Sattel": "007", "Glocke": "007", "Bem": "1 rosa" },
+        { "Sattel": "043", "Glocke": "043", "Bem": "1 rosa" },
+        { "Sattel": "086", "Glocke": "006", "Bem": "1 rosa" },
+        { "Sattel": "087", "Glocke": "006", "Bem": "1 rosa" },
+        { "Sattel": "045", "Glocke": "045", "Bem": "1 rosa" },
+        { "Sattel": "049", "Glocke": "049", "Bem": "1 rosa" },
+        { "Sattel": "053", "Glocke": "006", "Bem": "1 rosa" },
+        { "Sattel": "058", "Glocke": "006", "Bem": "1 rosa" },
+        { "Sattel": "078", "Glocke": "006", "Bem": "1 rosa" },
+        { "Sattel": "075", "Glocke": "006", "Bem": "1 rosa" },
+        { "Sattel": "009", "Glocke": "006", "Bem": "2 rot" },
+        { "Sattel": "012", "Glocke": "006", "Bem": "2 rot" },
+        { "Sattel": "013", "Glocke": "013", "Bem": "2 rot" },
+        { "Sattel": "014", "Glocke": "006", "Bem": "2 rot" },
+        { "Sattel": "038", "Glocke": "038", "Bem": "2 rot" },
+        { "Sattel": "040", "Glocke": "040", "Bem": "2 rot" },
+        { "Sattel": "041", "Glocke": "006", "Bem": "2 rot" },
+        { "Sattel": "079", "Glocke": "006", "Bem": "2 rot" },
+        { "Sattel": "085", "Glocke": "006", "Bem": "2 rot" },
+        { "Sattel": "084", "Glocke": "006", "Bem": "3 grün" },
+        { "Sattel": "059", "Glocke": "059", "Bem": "3 grün" },
+        { "Sattel": "015", "Glocke": "015", "Bem": "3 grün" },
+        { "Sattel": "016", "Glocke": "016", "Bem": "3 grün" },
+        { "Sattel": "017", "Glocke": "006", "Bem": "3 grün" },
+        { "Sattel": "018", "Glocke": "006", "Bem": "3 grün" },
+        { "Sattel": "054", "Glocke": "054", "Bem": "3 grün" },
+        { "Sattel": "077", "Glocke": "006", "Bem": "3 grün" },
+        { "Sattel": "080", "Glocke": "006", "Bem": "3 grün" },
+        { "Sattel": "081", "Glocke": "006", "Bem": "3 grün" },
+        { "Sattel": "082", "Glocke": "006", "Bem": "3 grün" },
+        { "Sattel": "039", "Glocke": "006", "Bem": "3 grün" },
+        { "Sattel": "046", "Glocke": "006", "Bem": "3 grün" },
+        { "Sattel": "023", "Glocke": "023", "Bem": "4 blau" },
+        { "Sattel": "025", "Glocke": "006", "Bem": "4 blau" },
+        { "Sattel": "026", "Glocke": "006", "Bem": "4 blau" },
+        { "Sattel": "027", "Glocke": "027", "Bem": "4 blau" },
+        { "Sattel": "028", "Glocke": "006", "Bem": "4 blau" },
+        { "Sattel": "029", "Glocke": "029", "Bem": "4 blau" },
+        { "Sattel": "030", "Glocke": "030", "Bem": "4 blau" },
+        { "Sattel": "037", "Glocke": "006", "Bem": "4 blau" },
+        { "Sattel": "044", "Glocke": "044", "Bem": "1 blau" },
+        { "Sattel": "048", "Glocke": "006", "Bem": "4 blau" },
+        { "Sattel": "050", "Glocke": "006", "Bem": "4 blau" },
+        { "Sattel": "055", "Glocke": "006", "Bem": "4 blau" },
+        { "Sattel": "056", "Glocke": "006", "Bem": "4 blau" },
+        { "Sattel": "057", "Glocke": "006", "Bem": "4 blau" },
+        { "Sattel": "061", "Glocke": "006", "Bem": "4 blau" },
+        { "Sattel": "032", "Glocke": "032", "Bem": "5 andere" },
+        { "Sattel": "033", "Glocke": "033", "Bem": "5 andere" },
+        { "Sattel": "034", "Glocke": "006", "Bem": "5 andere" },
+        { "Sattel": "035", "Glocke": "006", "Bem": "5 andere" },
+        { "Sattel": "036", "Glocke": "036", "Bem": "5 andere" },
+        { "Sattel": "051", "Glocke": "006", "Bem": "5 andere" },
+        { "Sattel": "062", "Glocke": "062", "Bem": "5 andere" },
+        { "Sattel": "052", "Glocke": "006", "Bem": "5 andere" },
+        { "Sattel": "042", "Glocke": "006", "Bem": "5 andere" },
+        { "Sattel": "074", "Glocke": "006", "Bem": "5 andere" },
+        { "Sattel": "076", "Glocke": "006", "Bem": "5 andere" },
     ];
 
 
@@ -106,23 +83,25 @@ var sattel = new function() {
     }
 
 
-    getHtml = function(ipad) {
-        var text = '<div class="product-wrapper" onclick="sattel.buy(\'' + ipad + '\')" class="product">'
-             + '<img src="images/sattelbezug-small/Sattelbezug-' + ipad + '.jpg" />'
+    getHtml = function(bundle) {
+        var text = '<div class="product-wrapper" onclick="sattel.buy(\'' + escape(JSON.stringify(bundle)) + '\')" class="product">'
+             + '<img src="images/sattelbezug-small/Sattelbezug-' + bundle.Sattel + '.jpg" />'
              + '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + self.preis + '</div>'
-             + ((glocke.liste.indexOf(ipad) == -1)
-                ? '<div class="glockeZumBezug"><img src="images/glocke-small/Veloglocke-006.jpg" /></div>'
-                : '<div class="glockeZumBezug"><img src="images/glocke-small/Veloglocke-' + ipad + '.jpg" /></div>')
+             + '<div class="glockeZumBezug"><img src="images/glocke-small/Veloglocke-' + bundle.Glocke + '.jpg" /></div>'
              + '</div>\n';
         return text;
     }
 
 
-    self.buy = function(str) {
-        str = str || document.getElementById("ArtikelNr").value;  // if ArtikelNr is not set (this is the case if buttons in form are pressed), read it from the form
-        var pic = '<img src="images/sattelbezug-small/Sattelbezug-' + str + '.jpg" />';
+    self.buy = function(bundle) {
+        if(bundle) {
+            global.selected = JSON.parse(unescape(bundle));
+        }
+        else {  // buttons in form are pressed
+        }
+        var pic = '<img src="images/sattelbezug-large/Sattelbezug-' + global.selected.Sattel + '.jpg" />';
         document.getElementById("pic").innerHTML = pic;
-        document.getElementById("ArtikelNr").value = str;
+        document.getElementById("ArtikelNr").value = global.selected.Sattel;
         document.getElementById("glockeNr").value = "";
         // document.getElementById("preis").value = self.preis;
         // document.getElementById("preisVersand").value = self.preisVersand;
@@ -138,7 +117,7 @@ var sattel = new function() {
         $('.form').removeClass('hidden');
 
         document.getElementById("orderform").action = "http://www.formular-chef.de/fc.cgi";
-        document.getElementById("SP").value = 'g' + str + 'sxp';
+        document.getElementById("SP").value = 'g' + global.selected.Sattel + 'sxp';
         document.getElementById("referer").value = "gegege.ch";
         document.getElementById("absender").value = "info@gegege.ch";
         document.getElementById("_absender_feldname").value = "Email";
