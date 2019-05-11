@@ -84,7 +84,7 @@ var glocke = new function() {
         $('input.selectionGlocke').addClass('selected');
         $('.form').removeClass('hidden');
 
-        document.getElementById("orderform").action = "http://www.formular-chef.de/fc.cgi";
+        document.getElementById("orderform").action = "https://www.formular-chef.de/fc.cgi";
         document.getElementById("SP").value = 'g' + global.selected.Glocke + 'sxp';
         document.getElementById("referer").value = "gegege.ch";
         document.getElementById("absender").value = "info@gegege.ch";
