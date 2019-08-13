@@ -20,6 +20,7 @@ var glocke = new function() {
         { "Sattel": "038", "Glocke": "038", "Bem": "2 rot" },
         { "Sattel": "040", "Glocke": "040", "Bem": "2 rot" },
         { "Sattel": "063", "Glocke": "063", "Bem": "2 rot" },
+        { "Sattel": "097", "Glocke": "097", "Bem": "2 rot" },
         { "Sattel": "062", "Glocke": "062", "Bem": "3 grün" },
         { "Sattel": "059", "Glocke": "059", "Bem": "3 grün" },
         { "Sattel": "015", "Glocke": "015", "Bem": "3 grün" },
@@ -28,6 +29,8 @@ var glocke = new function() {
         { "Sattel": "065", "Glocke": "065", "Bem": "3 grün" },
         { "Sattel": "068", "Glocke": "068", "Bem": "3 grün" },
         { "Sattel": "069", "Glocke": "069", "Bem": "3 grün" },
+        { "Sattel": "094", "Glocke": "094", "Bem": "3 grün" },
+        { "Sattel": "096", "Glocke": "096", "Bem": "3 grün" },
         { "Sattel": "023", "Glocke": "023", "Bem": "4 blau" },
         { "Sattel": "027", "Glocke": "027", "Bem": "4 blau" },
         { "Sattel": "029", "Glocke": "029", "Bem": "4 blau" },
@@ -36,8 +39,11 @@ var glocke = new function() {
         { "Sattel": "032", "Glocke": "032", "Bem": "5 andere" },
         { "Sattel": "033", "Glocke": "033", "Bem": "5 andere" },
         { "Sattel": "036", "Glocke": "036", "Bem": "5 andere" },
+        { "Sattel": "051", "Glocke": "051", "Bem": "5 andere" },
         { "Sattel": "060", "Glocke": "060", "Bem": "5 andere" },
         { "Sattel": "086", "Glocke": "086", "Bem": "5 andere" },
+        { "Sattel": "093", "Glocke": "093", "Bem": "5 andere" },
+
     ];
 
 
