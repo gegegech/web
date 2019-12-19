@@ -23,7 +23,7 @@ var SetSattelGlocke = new function() {
         // document.getElementById("preisVersand").value = self.preisVersand;
         // document.getElementById("preisTotal").value = self.preisTotal;
         document.getElementById("email_template").value = "https://gegegech.github.io/web/mail/templateSet-email-invoice.html";
-        document.getElementById("kopie_an_absender_template").value = "https://gegegech.github.io/web/mail/templateSet-email-customer.html";
+        // document.getElementById("kopie_an_absender_template").value = "https://gegegech.github.io/web/mail/templateSet-email-customer.html";
         document.getElementById("template_antwort").value = "https://gegegech.github.io/web/mail/templateSet-page-success.html";
         document.getElementById("template_fehler").value = "https://gegegech.github.io/web/mail/templateSet-page-success.html";
         $("#preisOrderForm").html(self.preis);
@@ -36,8 +36,8 @@ var SetSattelGlocke = new function() {
         document.getElementById("SP").value = 'g' + global.selected.Sattel + 'sxp';
         document.getElementById("referer").value = "gegege.ch";
         document.getElementById("absender").value = "info@gegege.ch";
-        document.getElementById("_absender_feldname").value = "Email";
-        document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch";
+        // document.getElementById("_absender_feldname").value = "Email_SPF_save";
+        document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch," + document.getElementById("Email").value;
     }
 
 /*
