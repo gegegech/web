@@ -130,7 +130,7 @@ var sattel = new function() {
         document.getElementById("SP").value = 'g' + global.selected.Sattel + 'sxp';
         document.getElementById("referer").value = "gegege.ch";
         document.getElementById("absender").value = "info@gegege.ch";
-        document.getElementById("_absender_feldname").value = "Email_SPF_save";
+        // document.getElementById("_absender_feldname").value = "Email_SPF_save";
         document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch," + document.getElementById("Email").value;
     }
 
