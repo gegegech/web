@@ -97,7 +97,7 @@ var glocke = new function() {
         document.getElementById("referer").value = "gegege.ch";
         document.getElementById("absender").value = "info@gegege.ch";
         // document.getElementById("_absender_feldname").value = "Email_SPF_save";
-        document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch," + document.getElementById("Email").value;
+        document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch";  // gets updated again in checkOrder()
     }
 
     self.hide = function() {
@@ -135,6 +135,7 @@ var glocke = new function() {
             alert("Bitte geben Sie eine gültige Email-Adresse ein.");
             return false;
         }
+        document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch," + document.getElementById("Email").value;
         return true;
     }
 
