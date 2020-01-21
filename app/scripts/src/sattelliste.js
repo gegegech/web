@@ -24,6 +24,8 @@ var sattel = new function() {
         { "Sattel": "058", "Glocke": "059", "Bem": "1 rosa" },
         { "Sattel": "078", "Glocke": "066", "Bem": "1 rosa" },
         { "Sattel": "075", "Glocke": "067", "Bem": "1 rosa" },
+        { "Sattel": "0106", "Glocke": "0107", "Bem": "1 rosa" },
+        { "Sattel": "0104", "Glocke": "0108", "Bem": "2 rot" },
         { "Sattel": "009", "Glocke": "006", "Bem": "2 rot" },
         { "Sattel": "012", "Glocke": "006", "Bem": "2 rot" },
         { "Sattel": "013", "Glocke": "013", "Bem": "2 rot" },
@@ -35,6 +37,7 @@ var sattel = new function() {
         { "Sattel": "041", "Glocke": "041", "Bem": "2 rot" },
         // { "Sattel": "079", "Glocke": "006", "Bem": "2 rot" },
         { "Sattel": "085", "Glocke": "063", "Bem": "2 rot" },
+        { "Sattel": "0103", "Glocke": "0102", "Bem": "3 grün" },
         // { "Sattel": "093", "Glocke": "093", "Bem": "5 andere" },
         { "Sattel": "090", "Glocke": "060", "Bem": "3 grün" },
         { "Sattel": "084", "Glocke": "062", "Bem": "3 grün" },
@@ -52,6 +55,8 @@ var sattel = new function() {
         // { "Sattel": "082", "Glocke": "068", "Bem": "3 grün" },
         { "Sattel": "039", "Glocke": "026", "Bem": "3 grün" },
         // { "Sattel": "046", "Glocke": "006", "Bem": "3 grün" },
+        { "Sattel": "098", "Glocke": "0105", "Bem": "3 grün" },
+        { "Sattel": "0105", "Glocke": "0106", "Bem": "3 grün" },
         // { "Sattel": "023", "Glocke": "023", "Bem": "4 blau" },
         { "Sattel": "025", "Glocke": "006", "Bem": "4 blau" },
         { "Sattel": "026", "Glocke": "026", "Bem": "4 blau" },
@@ -64,6 +69,8 @@ var sattel = new function() {
         // { "Sattel": "048", "Glocke": "006", "Bem": "4 blau" },
         { "Sattel": "050", "Glocke": "006", "Bem": "4 blau" },
         { "Sattel": "055", "Glocke": "026", "Bem": "4 blau" },
+        { "Sattel": "0101", "Glocke": "0109", "Bem": "4 blau" },
+        { "Sattel": "0102", "Glocke": "0109", "Bem": "4 blau" },
         // { "Sattel": "056", "Glocke": "006", "Bem": "4 blau" },
         // { "Sattel": "057", "Glocke": "006", "Bem": "4 blau" },
         // { "Sattel": "061", "Glocke": "026", "Bem": "4 blau" },
@@ -81,6 +88,7 @@ var sattel = new function() {
         { "Sattel": "093", "Glocke": "093", "Bem": "5 andere" },
         // { "Sattel": "059", "Glocke": "059", "Bem": "3 grün" },
         { "Sattel": "076", "Glocke": "006", "Bem": "5 andere" },
+        { "Sattel": "0100", "Glocke": "032", "Bem": "5 andere" },
     ];
 
 
