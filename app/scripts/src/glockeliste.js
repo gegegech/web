@@ -13,7 +13,7 @@ var glocke = new function() {
         { "Sattel": "043", "Glocke": "043", "Bem": "1 rosa" },
         { "Sattel": "045", "Glocke": "045", "Bem": "1 rosa" },
         { "Sattel": "049", "Glocke": "049", "Bem": "1 rosa" },
-        { "Sattel": "064", "Glocke": "064", "Bem": "1 rosa" },
+        // { "Sattel": "064", "Glocke": "064", "Bem": "1 rosa" },
         // { "Sattel": "066", "Glocke": "066", "Bem": "1 rosa" },
         { "Sattel": "078", "Glocke": "099", "Bem": "1 rosa" },
         { "Sattel": "067", "Glocke": "067", "Bem": "1 rosa" },
