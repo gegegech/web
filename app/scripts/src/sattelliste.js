@@ -21,7 +21,7 @@ var sattel = new function() {
         { "Sattel": "045", "Glocke": "045", "Bem": "1 rosa" },
         { "Sattel": "049", "Glocke": "049", "Bem": "1 rosa" },
         { "Sattel": "053", "Glocke": "006", "Bem": "1 rosa" },
-        { "Sattel": "058", "Glocke": "059", "Bem": "1 rosa" },
+        { "Sattel": "058", "Glocke": "0100", "Bem": "1 rosa" },
         { "Sattel": "078", "Glocke": "099", "Bem": "1 rosa" },
         { "Sattel": "075", "Glocke": "067", "Bem": "1 rosa" },
         { "Sattel": "0106", "Glocke": "0107", "Bem": "1 rosa" },
