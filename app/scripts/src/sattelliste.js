@@ -8,6 +8,7 @@ var sattel = new function() {
     self.preis = '25.-';
     self.preisVersand = '2.-';
     self.preisTotal = '27.-';
+    self.gekauft = false;
 
     self.liste = [
         // Liste aller Sattelbilder. Die Bilder müssen im Namensformat 'Sattelbezug-038.jpg' vorliegen.
@@ -140,45 +141,59 @@ var sattel = new function() {
         document.getElementById("absender").value = "info@gegege.ch";
         // document.getElementById("_absender_feldname").value = "Email_SPF_save";
         document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch";  // gets updated again in checkOrder()
+        document.getElementById("ID").value = '#' + Math.random().toString(36).substr(2, 6);
     }
 
     self.hide = function() {
          $('.form').addClass('hidden');
     }
 
+
+    makeUnclickable = function() {  // Kann nicht 2 mal gesendet werden + laden... text
+        self.gekauft = true;
+        $("input:submit").prop("value", "laden...");
+    }
+
+
     self.checkOrder = function(){
-        // Storing Field Values In Variables
-        var Vorname = document.getElementById("Vorname").value;
-        var Nachname = document.getElementById("Nachname").value;
-        var Strasse = document.getElementById("Strasse").value;
-        var PLZ = document.getElementById("PLZ").value;
-        var Ort = document.getElementById("Ort").value;
-        var Email = document.getElementById("Email").value;
-        // Regular Expression For Email from http://emailregex.com/
-        var emailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        var plzReg = /^[0-9]{4,5}$/;
-        // Conditions
-        var error = [];
-        if (Vorname == '') { error.push("Vorname"); }
-        if (Nachname == '') { error.push("Nachname"); }
-        if (Strasse == '') { error.push("Strasse"); }
-        if (PLZ == '') { error.push("PLZ"); }
-        if (Ort == '') { error.push("Ort"); }
-        if (Email == '') { error.push("Email"); }
-        if (error.length > 0) {
-            alert("Bitte ergänzen Sie die folgenden Angaben: " + error.join(", "));
+        if (self.gekauft) {
             return false;
         }
-        if (! PLZ.match(plzReg)) {
-            alert("Bitte geben Sie eine gültige Postleitzahl ein.");
-            return false;
+        else {
+            // Storing Field Values In Variables
+            var Vorname = document.getElementById("Vorname").value;
+            var Nachname = document.getElementById("Nachname").value;
+            var Strasse = document.getElementById("Strasse").value;
+            var PLZ = document.getElementById("PLZ").value;
+            var Ort = document.getElementById("Ort").value;
+            var Email = document.getElementById("Email").value;
+            // Regular Expression For Email from http://emailregex.com/
+            var emailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            var plzReg = /^[0-9]{4,5}$/;
+            // Conditions
+            var error = [];
+            if (Vorname == '') { error.push("Vorname"); }
+            if (Nachname == '') { error.push("Nachname"); }
+            if (Strasse == '') { error.push("Strasse"); }
+            if (PLZ == '') { error.push("PLZ"); }
+            if (Ort == '') { error.push("Ort"); }
+            if (Email == '') { error.push("Email"); }
+            if (error.length > 0) {
+                alert("Bitte ergänzen Sie die folgenden Angaben: " + error.join(", "));
+                return false;
+            }
+            if (! PLZ.match(plzReg)) {
+                alert("Bitte geben Sie eine gültige Postleitzahl ein.");
+                return false;
+            }
+            if (! Email.match(emailReg)) {
+                alert("Bitte geben Sie eine gültige Email-Adresse ein.");
+                return false;
+            }
+            document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch," + document.getElementById("Email").value;
+            makeUnclickable();
+            return true;
         }
-        if (! Email.match(emailReg)) {
-            alert("Bitte geben Sie eine gültige Email-Adresse ein.");
-            return false;
-        }
-        document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch," + document.getElementById("Email").value;
-        return true;
     }
 
     return self;
