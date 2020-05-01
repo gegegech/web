@@ -30,7 +30,7 @@ var SetSattelGlocke = new function() {
         $("#preisOrderFormVersand").html(self.preisVersand);
         $('input.selectButton').removeClass('selected');
         $('input.selectionSetSattelGlocke').addClass('selected');
-        $('.form').removeClass('hidden');
+        $('#buyForm').removeClass('hidden');
 
         document.getElementById("orderform").action = "https://www.formular-chef.de/fc.cgi";
         document.getElementById("SP").value = 'g' + global.selected.Sattel + 'sxp';
@@ -38,6 +38,7 @@ var SetSattelGlocke = new function() {
         document.getElementById("absender").value = "info@gegege.ch";
         // document.getElementById("_absender_feldname").value = "Email_SPF_save";
         document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch";  // gets updated again in checkOrder()
+        document.getElementById("ID").value = '#' + Math.random().toString(36).substr(2, 6);
     }
 
 

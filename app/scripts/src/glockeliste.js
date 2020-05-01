@@ -71,7 +71,7 @@ var glocke = new function() {
 
 
     getHtml = function(bundle) {
-        var text = '<div class="product-wrapper" onclick="glocke.buy(\'' + escape(JSON.stringify(bundle)) + '\')" class="product">'
+        var text = '<div class="product-wrapper" onclick="selector.showSelection(\'' + escape(JSON.stringify(bundle)) + '\')" class="product">'
              + '<img src="images/glocke-small/Veloglocke-' + bundle.Glocke + '.jpg" />'
              + '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + self.preis + '</div>'
              // + (sattel.liste.indexOf(ipad) > -1) ? '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + MATCH + '</div>'
@@ -102,7 +102,7 @@ var glocke = new function() {
         $("#preisOrderFormVersand").html(self.preisVersand);
         $('input.selectButton').removeClass('selected');
         $('input.selectionGlocke').addClass('selected');
-        $('.form').removeClass('hidden');
+        $('#buyForm').removeClass('hidden');
 
         document.getElementById("orderform").action = "https://www.formular-chef.de/fc.cgi";
         document.getElementById("SP").value = 'g' + global.selected.Glocke + 'sxp';
@@ -110,10 +110,11 @@ var glocke = new function() {
         document.getElementById("absender").value = "info@gegege.ch";
         // document.getElementById("_absender_feldname").value = "Email_SPF_save";
         document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch";  // gets updated again in checkOrder()
+        document.getElementById("ID").value = '#' + Math.random().toString(36).substr(2, 6);
     }
 
     self.hide = function() {
-         $('.form').addClass('hidden');
+         $('#buyForm').addClass('hidden');
     }
 
     return self;

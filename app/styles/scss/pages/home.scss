@@ -139,12 +139,12 @@ h3 {
     position: relative;
 }
 
-.product-wrapper .cart {
+.cart {
     display: none;
     position: absolute;
     right: 0;
     bottom: 5%;
-    padding: 2% 4%;
+    padding: 7px 14px;
     color: rgba(255, 255, 255, 1);
     background: rgba(0, 0, 0, .7);
 }
@@ -288,6 +288,104 @@ h3 {
     background: rgba(0, 0, 0, .7);
 }
 
+#formulare {	
+    position: relative;	
+    display: block;	
+    top: 0%;	
+    left: 0;	
+    max-width: 800px;	
+    margin: 0 auto;	
+    padding: 20px;	
+    background: white;	
+    z-index: 1;	
+    height: 100%;	
+    overflow: scroll;	
+    text-align: center;	
+  }	
+  #formulare input {
+    background-color: lightgray;	
+    text-align: center;	
+    position: relative;	
+    margin: 20px;
+    width: 100%;	
+    padding: 50px;	
+    margin: 0;	
+    font-size: 150%;	
+  }	
+  #formulare input:hover {	
+    background-color: grey;
+    color: white;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.5);
+  }	
+  #options {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+  }
+  #picSattelbezug {	
+    position: relative;
+    width: 42.5%;	
+    cursor: pointer;	
+  }	
+  #picSattelbezug img:hover {	
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.5);	
+  }	
+  #picSattelbezug img {	
+    width: 100%;	
+    height: 100%;	
+  }	
+  #picGlocke {	
+    position: relative;
+    width: 42.5%;	
+    cursor: pointer;	
+  }	
+  #picGlocke img:hover {	
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.5);	
+  }	
+  #picGlocke img {	
+    width: 100%;	
+    height: 100%;	
+  }	
+  #picSattelbezug .cart {	
+    display: block;	
+  }	
+  #picGlocke .cart {	
+    display: block;	
+  }	
+  #picSet {	
+    position: relative;
+    margin: 25px;
+    width: 92.5%;
+    cursor: pointer;
+  }	
+  #picSet .cart {	
+    display: block;	
+  }
+  #chooseSet {
+      border: none;
+  }
+  @media only screen and (max-width: 768px) {	
+    #picSattelbezug {	
+      display: block;	
+      position: relative;	
+      width: auto;	
+      top: auto;	
+      left: 0;	
+    }	
+    #picGlocke {	
+      display: block;	
+      position: relative;	
+      width: auto;	
+      top: auto;	
+      left: 0;	
+      margin-top: 25px;
+    }	
+    #picSet {
+        width: 100%;
+        margin: 25px 0 0 0;
+    }
+  }  
+
 .hidden {
     display: none;
 }
@@ -303,7 +401,7 @@ form > div {
     display: block;
     top: 0%;
     left: 0;
-    max-width: 800px;
+    max-width: 80vh;
     margin: 0 auto;
     padding: 20px;
     background: white;
@@ -337,6 +435,11 @@ input, textarea {
     margin: 15px 0 10px 15px;
     width: 49%;
     border: 2px solid grey;
+}
+
+input[type="submit"]:hover {	
+    background-color: grey;	
+    color: white;	
 }
 
 .long input,

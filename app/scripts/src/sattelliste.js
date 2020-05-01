@@ -103,7 +103,7 @@ var sattel = new function() {
 
 
     getHtml = function(bundle) {
-        var text = '<div class="product-wrapper" onclick="sattel.buy(\'' + escape(JSON.stringify(bundle)) + '\')" class="product">'
+        var text = '<div class="product-wrapper" onclick="selector.showSelection(\'' + escape(JSON.stringify(bundle)) + '\')" class="product">'
              + '<img src="images/sattelbezug-small/Sattelbezug-' + bundle.Sattel + '.jpg" />'
              + '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + self.preis + '</div>'
              + '<div class="glockeZumBezug"><img src="images/glocke-small/Veloglocke-' + bundle.Glocke + '.jpg" /></div>'
@@ -133,7 +133,7 @@ var sattel = new function() {
         $("#preisOrderFormVersand").html(self.preisVersand);
         $('input.selectButton').removeClass('selected');
         $('input.selectionSattel').addClass('selected');
-        $('.form').removeClass('hidden');
+        $('#buyForm').removeClass('hidden');
 
         document.getElementById("orderform").action = "https://www.formular-chef.de/fc.cgi";
         document.getElementById("SP").value = 'g' + global.selected.Sattel + 'sxp';
@@ -145,7 +145,7 @@ var sattel = new function() {
     }
 
     self.hide = function() {
-         $('.form').addClass('hidden');
+         $('#buyForm').addClass('hidden');
     }
 
 
