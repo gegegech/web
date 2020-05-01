@@ -83,7 +83,7 @@
         </div>
         <div class="impressumlink"><a href="impressum.html">Impressum</a></div>
     </div>
-    <div class="form hidden">
+    <div class="form hidden" id="buyForm">
         <div class="formBackground" onclick="sattel.hide();"></div>
         <!-- Das Formular beginnt hier, die folgende Zeile NICHT ändern: -->
         <form id="orderform" action="" method="post" enctype="multipart/form-data" onsubmit="return sattel.checkOrder()">
@@ -131,17 +131,6 @@
         <i class="close fa fa-times" aria-hidden="true" onclick="sattel.hide();"></i>
 
         <div id="pic"></div>
-
-        <h3>Auswahl</h3>
-
-        <div>
-            <input type="button" class="selectButton selectionSattel" value="nur Sattelbezug" onclick="sattel.buy()">
-            <input type="button" class="selectButton selectionSetSattelGlocke" value="Set mit Veloglocke" onclick="SetSattelGlocke.buy()">
-        </div>
-        <div>
-            <input type="button" class="selectButton selectionGlocke" value="nur Veloglocke" onclick="glocke.buy()">
-        </div>
-
 
         <h3>Jetzt bestellen</h3>
         <!-- p>CHF <span class="preis"></span><br>Aktion: Versandkosten gratis!</p -->
@@ -191,6 +180,34 @@
         </div>
         </form>
     </div>
+
+
+    <div class="form hidden" id="chooseProduct">
+        <div class="formBackground" onclick="selector.hide();"></div>
+        <div id="formulare">
+        <i class="close fa fa-times" aria-hidden="true" onclick="selector.hide();"></i>
+
+        <!-- <div id="pic"></div> -->
+
+        <h3>Auswahl</h3>
+
+        <div id="options">
+            <!-- <input type="button" class="selectButton selectionSattel" value="nur Sattelbezug" onclick="sattel.buy()"> -->
+            <!-- <input type="button" class="selectButton selectionSetSattelGlocke" value="Set mit Veloglocke" onclick="SetSattelGlocke.buy()"> -->
+
+            <div id="picSattelbezug" onclick="selector.hide(); sattel.buy();"></div>
+            <div id="picGlocke" onclick="selector.hide(); glocke.buy();"></div>
+
+            <!-- <input type="button" class="selectButton selectionGlocke" value="nur Veloglocke" onclick="glocke.buy()"> -->
+            <div id="picSet">
+            <input type="button" id="chooseSet" onclick="selector.hide(); SetSattelGlocke.buy();" value="Als Set bestellen">
+            <div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 35.-</div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119932427-1"></script>
