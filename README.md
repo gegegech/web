@@ -68,6 +68,7 @@ Benötigte Software
 * Texteditor Visual Studio Code: https://code.visualstudio.com/download
 * Versionsverwaltung SourceTree: https://www.sourcetreeapp.com
 * npm: https://www.npmjs.com/get-npm
+* update npm to newest version: in terminal, enter `npm install npm@latest -g`
 
 
 Front End Gulp Boilerplate
