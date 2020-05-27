@@ -5,7 +5,7 @@ ANLEITUNG für Massimo
 Vorbereitung
 ------------
 
-0. Finder -> diese Datei in TextWrangler öffnen ( Documents/gegege.ch/README.md )
+0. Finder -> diese Datei in Visual Studio Code öffnen ( Documents/gegege.ch/README.md )
 1. Lupe -> SourceTree öffnen
 2. oben links auf "Pull" klicken
 
@@ -52,7 +52,7 @@ Bild muss 1000x1000 px gross sein, Name muss sein z.B. "Sattelbezug-037.jpg" (Gr
 im Finder: Bilder kopieren ins Verzeichnis Documents/gegege.ch/app/images/sattelbezug-small
 Gleich wie oben, Bild muss 400x400px gross sein
 
-die Datei Documents/gegege.ch/app/scripts/src/sattelliste.js in Textwrangler öffnen:
+die Datei Documents/gegege.ch/app/scripts/src/sattelliste.js in Visual Studio Code öffnen:
 Die Liste (ab Zeile 12) anpassen und speichern.
 
 
@@ -68,7 +68,7 @@ Benötigte Software
 * Texteditor Visual Studio Code: https://code.visualstudio.com/download
 * Versionsverwaltung SourceTree: https://www.sourcetreeapp.com
 * npm: https://www.npmjs.com/get-npm
-* update npm to newest version: in terminal, enter `npm install npm@latest -g`
+* update npm to newest version: in terminal, enter `sudo npm install npm@latest -g`
 
 
 Front End Gulp Boilerplate
@@ -80,7 +80,7 @@ Front-end boilerplate for Gulp with everything you need to get started.
 * Then run `npm install` to install dev dependencies. Use sudo if needed.
 
 You'll need to have Gulp installed. If you already have Gulp installed, you can skip the following line. It is as simple as running:
-* `npm install -g gulp`
+* `sudo npm install -g gulp`
 
 During development mode, run the default task so you'll have watchers and browser sync. Simply do the following:
 * Run `gulp` to start it up
