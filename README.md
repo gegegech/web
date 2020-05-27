@@ -65,7 +65,7 @@ Die Liste (ab Zeile 12) anpassen und speichern.
 Benötigte Software
 ==========================
 
-* Texteditor TextWrangler: https://itunes.apple.com/ch/app/textwrangler/id404010395?mt=12
+* Texteditor Visual Studio Code: https://code.visualstudio.com/download
 * Versionsverwaltung SourceTree: https://www.sourcetreeapp.com
 * npm: https://docs.npmjs.com/getting-started/installing-node
 
