@@ -89,28 +89,18 @@ var glocke = new function() {
         }
         var pic = '<img src="images/glocke-large/Veloglocke-' + global.selected.Glocke + '.jpg" />';
         document.getElementById("pic").innerHTML = pic;
-        document.getElementById("ArtikelNr").value = global.selected.Glocke;
-        document.getElementById("glockeNr").value = "";
-        // document.getElementById("preis").value = self.preis;
-        // document.getElementById("preisVersand").value = self.preisVersand;
-        // document.getElementById("preisTotal").value = self.preisTotal;
-        document.getElementById("email_template").value = "https://gegegech.github.io/web/mail/templateGlocke-email-invoice.html";
-        // document.getElementById("kopie_an_absender_template").value = "https://gegegech.github.io/web/mail/templateGlocke-email-customer.html";
-        document.getElementById("template_antwort").value = "https://gegegech.github.io/web/mail/templateGlocke-page-success.html";
-        document.getElementById("template_fehler").value = "https://gegegech.github.io/web/mail/templateGlocke-page-success.html";
+        document.getElementById("itemNr").value = global.selected.Glocke;
+        document.getElementById("bellNr").value = global.selected.Glocke;
+        document.getElementById("template").value = "template-glocke-email-invoice";
+
         $("#preisOrderForm").html(self.preis);
         $("#preisOrderFormVersand").html(self.preisVersand);
         $('input.selectButton').removeClass('selected');
         $('input.selectionGlocke').addClass('selected');
         $('#buyForm').removeClass('hidden');
+        $.get("https://gegege-backend.herokuapp.com/wake");
 
-        document.getElementById("orderform").action = "https://www.formular-chef.de/fc.cgi";
-        document.getElementById("SP").value = 'g' + global.selected.Glocke + 'sxp';
-        document.getElementById("referer").value = "gegege.ch";
-        document.getElementById("absender").value = "info@gegege.ch";
-        // document.getElementById("_absender_feldname").value = "Email_SPF_save";
-        document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch";  // gets updated again in checkOrder()
-        document.getElementById("ID").value = '#' + Math.random().toString(36).substr(2, 6);
+        document.getElementById("id").value = '#' + Math.random().toString(36).substr(2, 6);
     }
 
     self.hide = function() {

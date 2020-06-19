@@ -86,18 +86,11 @@
     <div class="form hidden" id="buyForm">
         <div class="formBackground" onclick="sattel.hide();"></div>
         <!-- Das Formular beginnt hier, die folgende Zeile NICHT ändern: -->
-        <form id="orderform" action="" method="post" enctype="multipart/form-data" onsubmit="return sattel.checkOrder()">
-        <input type="hidden" name="referer" id="referer" value="gegege.ch">
-        <input type="hidden" name="_referer" value="gegege.ch">
-        <input type="hidden" name="absender" id="absender" value="">
-        <input type="hidden" name="Email_SPF_save" id="Email_SPF_save" value="info@gegege.ch">
-        <input type="hidden" name="_absender_feldname" id="_absender_feldname" value="Email_SPF_save">
-        <input type="hidden" name="ID" id="ID" value="">
+        <form id="orderform" action="" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" id="id" value="">
 
         <!-- eMail an uns selber: -->
-        <input type="hidden" name="empfaenger" id="empfaenger" value="">
-        <input type="hidden" name="betreff" value="Bestellung vom ##DATUM##, ##UHRZEIT## | gegege.ch">
-        <input type="hidden" name="email_template" id="email_template" value="https://gegegech.github.io/web/mail/template-email-invoice.html">
+        <input type="hidden" name="template" id="template" value="">
 
         <!-- E-Mail an den Besucher:
             Seit dem SPL-Problem benutzen wir dies nicht mehr, denn diese Mails werden mit FROM:<Kunde> versandt.
@@ -111,19 +104,9 @@
         <input type="hidden" name="kopie_an_absender_template" id="kopie_an_absender_template" value="https://gegegech.github.io/web/mail/template-email-customer.html">
          -->
 
-        <!-- Die URL zum Antwortseiten-Template: -->
-        <input type="hidden" name="template_antwort" id="template_antwort" value="https://gegegech.github.io/web/mail/template-page-success.html">
-        <!-- Die URL zum Fehlerseiten-Template: -->
-        <input type="hidden" name="template_fehler" id="template_fehler" value="https://gegegech.github.io/web/mail/template-page-success.html">
-
         <!-- Hier beginnen die Formular-Felder, die dem Besucher angezeigt werden: -->
-        <input type="hidden" name="ArtikelNr" id="ArtikelNr" value="">
-        <input type="hidden" name="glockeNr" id="glockeNr" value="">
-        <input type="hidden" name="SP" id="SP" value="">
-
-        <input type="hidden" name="preis" id="preis" value="">
-        <input type="hidden" name="preisVersand" id="preisVersand" value="">
-        <input type="hidden" name="preisTotal" id="preisTotal" value="">
+        <input type="hidden" name="itemNr" id="itemNr" value="">
+        <input type="hidden" name="bellNr" id="bellNr" value="">
 
         <!--
             <label for="Anrede">Anrede:</label>
@@ -143,23 +126,23 @@
         <!-- p>CHF <span class="preis"></span><br>Aktion: Versandkosten gratis!</p -->
         <p>CHF <span class="preis" id="preisOrderForm"></span><br> + Versand CHF <span id="preisOrderFormVersand">2.-</span> (A-Post)</p>
         <div>
-            <label for="Vorname">Vorname:</label>
-            <input name="Vorname" id="Vorname" placeholder="Vorname">
+            <label for="firstName">Vorname:</label>
+            <input name="firstName" id="firstName" placeholder="Vorname">
 
-            <label for="Nachname">Nachname:</label>
-            <input name="Nachname" id="Nachname" placeholder="Nachname">
+            <label for="lastName">Nachname:</label>
+            <input name="lastName" id="lastName" placeholder="Nachname">
         </div>
         <div class="long">
-            <label for="Strasse">Strasse und Nummer:</label>
-            <input name="Strasse" id="Strasse" placeholder="Strasse">
+            <label for="street">Strasse und Nummer:</label>
+            <input name="street" id="street" placeholder="Strasse">
         </div>
 
         <div>
             <label for="PLZ">PLZ:</label>
             <input class="plz" name="PLZ" id="PLZ" placeholder="PLZ">
 
-            <label for="Ort">Ort:</label>
-            <input class="ort" name="Ort" id="Ort" placeholder="Ort">
+            <label for="place">Ort:</label>
+            <input class="ort" name="place" id="place" placeholder="Ort">
         </div>
 
         <!--
@@ -174,7 +157,7 @@
 
         <div class="long">
             <label for="text">Bemerkungen:</label>
-            <textarea id="Bemerkungen" name="Bemerkungen" rows="4" cols="30" placeholder="Bemerkungen"></textarea>
+            <textarea id="remarks" name="remarks" rows="4" cols="30" placeholder="Bemerkungen"></textarea>
         </div>
 
         <div>
@@ -191,7 +174,7 @@
 
     <div class="form hidden" id="chooseProduct">
         <div class="formBackground" onclick="selector.hide();"></div>
-        <div id="formulare">
+        <div id="formularChooseProduct">
         <i class="close fa fa-times" aria-hidden="true" onclick="selector.hide();"></i>
 
         <h3>Auswahl</h3>
@@ -207,6 +190,122 @@
         </div>
     </div>
 
+
+    <!-- <div class="form hidden" id="orderSuccess">
+        <div class="formBackground" onclick="orderStatus.hide();"></div>
+        <div id="formularOrderSuccess">
+        <i class="close fa fa-times" aria-hidden="true" onclick="orderStatus.hide();"></i>
+
+        <h3>Vielen Dank für Ihre Bestellung!</h3>
+
+        <p>Bitte Überprüfen Sie Ihre E-mail Inbox.</p>
+        </div>
+    </div> -->
+
+
+    <div class="form hidden" id="orderSuccess">
+        <div class="formBackground" onclick="orderStatus.hide(); $('#orderSuccess').html(window.freshEmailTemplate);"></div>
+        <div id="formularOrderSuccess">
+            <i class="close fa fa-times" aria-hidden="true" onclick="orderStatus.hide(); $('#orderSuccess').html(window.freshEmailTemplate);"></i>
+
+            
+            <div class="content" style="max-width: none;">
+                <table class="main" width="100%" cellpadding="0" cellspacing="0" style="border: none;">
+                    <tr>
+                        <td class="content-wrap aligncenter">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="content-block">
+                                        <h1 class="aligncenter">GEGEGE.CH</h1>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-block">
+                                        <h2 class="aligncenter">Herzlichen Dank f&uuml;r deine Bestellung!</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-block aligncenter">
+                                        <table class="invoice">
+                                            <tr>
+                                                <td id="NameAdressEmail">##Vorname## ##Nachname##<br>##Strasse##<br>##PLZ## ##Ort##<br>##Email##</td>
+                                            </tr>
+                                            <tr>
+                                                <td id="DateIDOfOrder"><h3>Rechnung ##DATUM##, ##UHRZEIT##, ##ID##</h3></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table class="invoice-items" cellpadding="0" cellspacing="0">
+                                                        <tr id="saddleRow">
+                                                            <td>Velosattelbezug Nr. ##ArtikelNr## <img id="saddleImage" src="" width="100" height="100" style="width:100px; float:right;"/></td>
+                                                            <td class="alignright"></td>
+                                                        </tr>
+                                                        <tr id="bellRow">
+                                                            <td>Veloglocke Nr. ##glockeNr## <img id="bellImage" src="" width="100" height="100" style="width:100px; float:right;"/></td>
+                                                            <td class="alignright"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Preis</td>
+                                                            <td class="alignright" id="itemPrice">CHF 35.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Verpackung und Transport</td>
+                                                            <td class="alignright" id="shippingFees">CHF 9.00</td>
+                                                        </tr>
+                                                        <tr class="total">
+                                                            <td class="alignright" width="80%">Total</td>
+                                                            <td class="alignright" id="totalPrice">CHF 44.00</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td id="remarks">##Bemerkungen##</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- <tr>
+                                    <td class="content-block aligncenter">
+                                        BANKVERBINDUNG<br>
+                                        IBAN CH02 0070 0110 0036 1838 4<br>
+                                        BIC ZKBKCHZZ80A<br>
+                                        Mirjam Mazza, Sch&ouml;nholzweg 24, 8409 Winterthur
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-block aligncenter">
+                                        Zahlungsweise: innerhalb 30 Tage
+                                    </td>
+                                </tr> -->
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!-- <div class="footer">
+                    <table width="100%">
+                        <tr>
+                            <td class="aligncenter content-block">Fragen? E-Mail <a href="mailto:info@gegege.ch">info@gegege.ch</a> | <a href="tel:+41522020259">+41 52 202 02 59</a></td>
+                        </tr>
+                    </table>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form hidden" id="orderFail">
+        <div class="formBackground" onclick="orderStatus.hide();"></div>
+        <div id="formularOrderFail">
+            <i class="close fa fa-times" aria-hidden="true" onclick="orderStatus.hide();"></i>
+
+            <h3>Etwas ist schief gelaufen...</h3>
+
+            <p>Bitte kontaktieren Sie uns, damit wir den Fehler beheben können: </p>
+            <p><a href="mailto:info@gegege.ch?Subject=Mail%20via%20gegege.ch">info@gegege.ch</a></p>
+            <p><a href="tel:+41522020259">+41 52 202 02 59</a></p>
+        </div>
+    </div>
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->

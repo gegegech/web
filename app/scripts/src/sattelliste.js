@@ -120,28 +120,18 @@ var sattel = new function() {
         }
         var pic = '<img src="images/sattelbezug-large/Sattelbezug-' + global.selected.Sattel + '.jpg" />';
         document.getElementById("pic").innerHTML = pic;
-        document.getElementById("ArtikelNr").value = global.selected.Sattel;
-        document.getElementById("glockeNr").value = "";
-        // document.getElementById("preis").value = self.preis;
-        // document.getElementById("preisVersand").value = self.preisVersand;
-        // document.getElementById("preisTotal").value = self.preisTotal;
-        document.getElementById("email_template").value = "https://gegegech.github.io/web/mail/template-email-invoice.html";
+        document.getElementById("itemNr").value = global.selected.Sattel;
+        document.getElementById("bellNr").value = "";
+        document.getElementById("template").value = "template-email-invoice";
         // document.getElementById("kopie_an_absender_template").value = "https://gegegech.github.io/web/mail/template-email-customer.html";
-        document.getElementById("template_antwort").value = "https://gegegech.github.io/web/mail/template-page-success.html";
-        document.getElementById("template_fehler").value = "https://gegegech.github.io/web/mail/template-page-success.html";
         $("#preisOrderForm").html(self.preis);
         $("#preisOrderFormVersand").html(self.preisVersand);
         $('input.selectButton').removeClass('selected');
         $('input.selectionSattel').addClass('selected');
         $('#buyForm').removeClass('hidden');
+        $.get("https://gegege-backend.herokuapp.com/wake");
 
-        document.getElementById("orderform").action = "https://www.formular-chef.de/fc.cgi";
-        document.getElementById("SP").value = 'g' + global.selected.Sattel + 'sxp';
-        document.getElementById("referer").value = "gegege.ch";
-        document.getElementById("absender").value = "info@gegege.ch";
-        // document.getElementById("_absender_feldname").value = "Email_SPF_save";
-        document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch";  // gets updated again in checkOrder()
-        document.getElementById("ID").value = '#' + Math.random().toString(36).substr(2, 6);
+        document.getElementById("id").value = '#' + Math.random().toString(36).substr(2, 6);
     }
 
     self.hide = function() {
@@ -149,9 +139,14 @@ var sattel = new function() {
     }
 
 
-    makeUnclickable = function() {  // Kann nicht 2 mal gesendet werden + laden... text
+    self.makeUnclickable = function() {  // Kann nicht 2 mal gesendet werden + laden... text
         self.gekauft = true;
         $("input:submit").prop("value", "laden...");
+    }
+
+    self.makeClickable = function() {  // Kann wieder geclickt werden
+        self.gekauft = false;
+        $("input:submit").prop("value", "Senden");
     }
 
 
@@ -161,11 +156,11 @@ var sattel = new function() {
         }
         else {
             // Storing Field Values In Variables
-            var Vorname = document.getElementById("Vorname").value;
-            var Nachname = document.getElementById("Nachname").value;
-            var Strasse = document.getElementById("Strasse").value;
+            var Vorname = document.getElementById("firstName").value;
+            var Nachname = document.getElementById("lastName").value;
+            var Strasse = document.getElementById("street").value;
             var PLZ = document.getElementById("PLZ").value;
-            var Ort = document.getElementById("Ort").value;
+            var Ort = document.getElementById("place").value;
             var Email = document.getElementById("Email").value;
             // Regular Expression For Email from http://emailregex.com/
             var emailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -190,8 +185,8 @@ var sattel = new function() {
                 alert("Bitte geben Sie eine gültige Email-Adresse ein.");
                 return false;
             }
-            document.getElementById("empfaenger").value = "info@gegege.ch,ansgar.john@swupp.ch," + document.getElementById("Email").value;
-            makeUnclickable();
+            self.makeUnclickable();
+            fillData();
             return true;
         }
     }
