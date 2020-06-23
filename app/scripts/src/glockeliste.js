@@ -55,7 +55,7 @@ var glocke = new function() {
         { "Sattel": "036", "Glocke": "036", "Bem": "5 andere" },
         { "Sattel": "051", "Glocke": "051", "Bem": "5 andere" },
         // { "Sattel": "060", "Glocke": "060", "Bem": "5 andere" },
-        { "Sattel": "086", "Glocke": "086", "Bem": "5 andere" },
+        // { "Sattel": "086", "Glocke": "086", "Bem": "5 andere" },
         { "Sattel": "093", "Glocke": "093", "Bem": "5 andere" },
 
     ];
