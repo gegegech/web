@@ -12,7 +12,7 @@ var sattel = new function() {
 
     self.liste = [
         // Liste aller Sattelbilder. Die Bilder müssen im Namensformat 'Sattelbezug-038.jpg' vorliegen.
-        { "Sattel": "002", "Glocke": "002", "Bem": "1 rosa" },
+        // { "Sattel": "002", "Glocke": "002", "Bem": "1 rosa" },
         { "Sattel": "006", "Glocke": "006", "Bem": "1 rosa" },
         // { "Sattel": "092", "Glocke": "006", "Bem": "1 rosa" },
         // { "Sattel": "007", "Glocke": "086", "Bem": "1 rosa" },
@@ -37,7 +37,7 @@ var sattel = new function() {
         { "Sattel": "040", "Glocke": "040", "Bem": "2 rot" },
          // { "Sattel": "041", "Glocke": "041", "Bem": "2 rot" },
         // { "Sattel": "079", "Glocke": "006", "Bem": "2 rot" },
-        { "Sattel": "085", "Glocke": "063", "Bem": "2 rot" },
+        // { "Sattel": "085", "Glocke": "063", "Bem": "2 rot" },
         { "Sattel": "0103", "Glocke": "0102", "Bem": "3 grün" },
         // { "Sattel": "093", "Glocke": "093", "Bem": "5 andere" },
         { "Sattel": "090", "Glocke": "0104", "Bem": "3 grün" },

@@ -9,7 +9,7 @@ var glocke = new function() {
     self.liste = [
         // Liste aller Glockebilder. Die Bilder müssen im Namensformat 'Glockebezug-038.jpg' vorliegen.
         { "Sattel": "006", "Glocke": "006", "Bem": "1 pimp my bike" },
-        { "Sattel": "002", "Glocke": "002", "Bem": "1 rosa" },
+        // { "Sattel": "002", "Glocke": "002", "Bem": "1 rosa" },
         { "Sattel": "043", "Glocke": "043", "Bem": "1 rosa" },
         { "Sattel": "045", "Glocke": "045", "Bem": "1 rosa" },
         { "Sattel": "049", "Glocke": "049", "Bem": "1 rosa" },
@@ -23,7 +23,7 @@ var glocke = new function() {
         { "Sattel": "013", "Glocke": "013", "Bem": "2 rot" },
         { "Sattel": "038", "Glocke": "038", "Bem": "2 rot" },
         { "Sattel": "040", "Glocke": "040", "Bem": "2 rot" },
-        { "Sattel": "085", "Glocke": "063", "Bem": "2 rot" },
+        // { "Sattel": "085", "Glocke": "063", "Bem": "2 rot" },
         { "Sattel": "097", "Glocke": "097", "Bem": "2 rot" },
         // { "Sattel": "091", "Glocke": "0104", "Bem": "2 rot" },
         { "Sattel": "098", "Glocke": "0105", "Bem": "3 grün" },
