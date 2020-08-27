@@ -19,6 +19,7 @@ var glocke = new function() {
         { "Sattel": "067", "Glocke": "068", "Bem": "1 rosa" },
         { "Sattel": "0100", "Glocke": "032", "Bem": "1 rosa" },
         { "Sattel": "0106", "Glocke": "0107", "Bem": "1 rosa" },
+        { "Sattel": "053", "Glocke": "0112", "Bem": "1 rosa" },
         // { "Sattel": "090", "Glocke": "0104", "Bem": "2 rot" },
         { "Sattel": "013", "Glocke": "013", "Bem": "2 rot" },
         { "Sattel": "038", "Glocke": "038", "Bem": "2 rot" },
@@ -39,8 +40,9 @@ var glocke = new function() {
         { "Sattel": "094", "Glocke": "094", "Bem": "3 grün" },
         { "Sattel": "096", "Glocke": "096", "Bem": "3 grün" },
         { "Sattel": "0105", "Glocke": "0106", "Bem": "3 grün" },
+        { "Sattel": "050", "Glocke": "0111", "Bem": "3 grün" },
         { "Sattel": "023", "Glocke": "023", "Bem": "4 blau" },
-        { "Sattel": "026", "Glocke": "026", "Bem": "4 blau" },
+        { "Sattel": "026", "Glocke": "0113", "Bem": "4 blau" },
         // { "Sattel": "027", "Glocke": "027", "Bem": "4 blau" },
         { "Sattel": "029", "Glocke": "029", "Bem": "4 blau" },
         // { "Sattel": "030", "Glocke": "030", "Bem": "4 blau" },
@@ -50,6 +52,8 @@ var glocke = new function() {
         { "Sattel": "0101", "Glocke": "0109", "Bem": "4 blau" },
         { "Sattel": "0102", "Glocke": "0109", "Bem": "4 blau" },
         { "Sattel": "055", "Glocke": "0101", "Bem": "4 blau" },
+        { "Sattel": "039", "Glocke": "0110", "Bem": "4 blau" },
+        { "Sattel": "026", "Glocke": "0113", "Bem": "4 blau" },
         // { "Sattel": "032", "Glocke": "032", "Bem": "5 andere" },
         // { "Sattel": "033", "Glocke": "033", "Bem": "5 andere" },
         { "Sattel": "036", "Glocke": "036", "Bem": "5 andere" },
@@ -57,6 +61,8 @@ var glocke = new function() {
         // { "Sattel": "060", "Glocke": "060", "Bem": "5 andere" },
         // { "Sattel": "086", "Glocke": "086", "Bem": "5 andere" },
         { "Sattel": "093", "Glocke": "093", "Bem": "5 andere" },
+        { "Sattel": "034", "Glocke": "0114", "Bem": "5 andere" },
+        { "Sattel": "062", "Glocke": "0115", "Bem": "5 andere" },
 
     ];
 
