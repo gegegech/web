@@ -10,7 +10,7 @@ var glocke = new function() {
         // Liste aller Glockebilder. Die Bilder müssen im Namensformat 'Glockebezug-038.jpg' vorliegen.
         // { "Sattel": "006", "Glocke": "006", "Bem": "1 pimp my bike" },
         // { "Sattel": "002", "Glocke": "002", "Bem": "1 rosa" },
-        { "Sattel": "043", "Glocke": "043", "Bem": "1 rosa" },
+        // { "Sattel": "043", "Glocke": "043", "Bem": "1 rosa" },
         // { "Sattel": "045", "Glocke": "045", "Bem": "1 rosa" },
         { "Sattel": "049", "Glocke": "049", "Bem": "1 rosa" },
         { "Sattel": "087", "Glocke": "064", "Bem": "1 rosa" },
