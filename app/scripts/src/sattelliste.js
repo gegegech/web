@@ -30,7 +30,7 @@ var sattel = new function() {
         { "Sattel": "0104", "Glocke": "0108", "Bem": "2 rot" },
         // { "Sattel": "009", "Glocke": "006", "Bem": "2 rot" },
         { "Sattel": "012", "Glocke": "006", "Bem": "2 rot" },
-        { "Sattel": "013", "Glocke": "013", "Bem": "2 rot" },
+        // { "Sattel": "013", "Glocke": "013", "Bem": "2 rot" },
         { "Sattel": "097", "Glocke": "097", "Bem": "2 rot" },
         // { "Sattel": "014", "Glocke": "006", "Bem": "2 rot" },
         // { "Sattel": "091", "Glocke": "0104", "Bem": "2 rot" },
@@ -94,7 +94,7 @@ var sattel = new function() {
         { "Sattel": "093", "Glocke": "093", "Bem": "5 andere" },
         // { "Sattel": "059", "Glocke": "059", "Bem": "3 grün" },
         { "Sattel": "076", "Glocke": "006", "Bem": "5 andere" },
-        { "Sattel": "0100", "Glocke": "032", "Bem": "5 andere" },
+        // { "Sattel": "0100", "Glocke": "032", "Bem": "5 andere" },
     ];
 
 
