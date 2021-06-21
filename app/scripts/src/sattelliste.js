@@ -38,6 +38,8 @@ var sattel = new function() {
         // { "Sattel": "091", "Glocke": "0104", "Bem": "2 rot" },
         { "Sattel": "038", "Glocke": "038", "Bem": "2 rot" },
         // { "Sattel": "040", "Glocke": "040", "Bem": "2 rot" },
+        { "Sattel": "0117", "Glocke": "0125", "Bem": "3 andere" },
+        { "Sattel": "0118", "Glocke": "0122", "Bem": "3 andere" },
         { "Sattel": "0109", "Glocke": "0119", "Bem": "3 grün" },
          // { "Sattel": "041", "Glocke": "041", "Bem": "2 rot" },
         // { "Sattel": "079", "Glocke": "006", "Bem": "2 rot" },
