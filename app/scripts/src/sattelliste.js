@@ -6,8 +6,8 @@ var sattel = new function() {
     var self = this;
 
     self.preis = '25.-';
-    self.preisVersand = '2.-';
-    self.preisTotal = '27.-';
+    self.preisVersand = '3.-';
+    self.preisTotal = '28.-';
     self.gekauft = false;
 
     self.liste = [

@@ -37,8 +37,8 @@ function fillData() {
         $("#saddleImage").attr("src", "https://gegegech.github.io/web/images/sattelbezug-small/Sattelbezug-"+$("#itemNr").val()+".jpg");
         $("#bellImage").attr("src", "");
         $("#itemPrice").html("CHF 25.00");
-        $("#shippingFees").html("CHF 2.00");
-        $("#totalPrice").html("CHF 27.00");
+        $("#shippingFees").html("CHF 3.00");
+        $("#totalPrice").html("CHF 28.00");
         $("#bellRow").hide();
         $("#saddleRow").show();
     }
@@ -46,8 +46,8 @@ function fillData() {
         $("#bellImage").attr("src", "https://gegegech.github.io/web/images/glocke-small/Veloglocke-"+$("#bellNr").val()+".jpg");
         $("#saddleImage").attr("src", "");
         $("#itemPrice").html("CHF 14.00");
-        $("#shippingFees").html("CHF 9.00");
-        $("#totalPrice").html("CHF 23.00");
+        $("#shippingFees").html("CHF 10.00");
+        $("#totalPrice").html("CHF 24.00");
         $("#saddleRow").hide();
         $("#bellRow").show();
     }
@@ -55,8 +55,8 @@ function fillData() {
         $("#saddleImage").attr("src", "https://gegegech.github.io/web/images/sattelbezug-small/Sattelbezug-"+$("#itemNr").val()+".jpg");
         $("#bellImage").attr("src", "https://gegegech.github.io/web/images/glocke-small/Veloglocke-"+$("#bellNr").val()+".jpg");
         $("#itemPrice").html("CHF 35.00");
-        $("#shippingFees").html("CHF 9.00");
-        $("#totalPrice").html("CHF 44.00");
+        $("#shippingFees").html("CHF 10.00");
+        $("#totalPrice").html("CHF 45.00");
         $("#saddleRow").show();
         $("#bellRow").show();
     }

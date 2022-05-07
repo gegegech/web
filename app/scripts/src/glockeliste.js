@@ -3,8 +3,8 @@ var glocke = new function() {
     var self = this;
 
     self.preis = '14.-';
-    self.preisVersand = '9.-';
-    self.preisTotal = '23.-';
+    self.preisVersand = '10.-';
+    self.preisTotal = '24.-';
 
     self.liste = [
         // Liste aller Glockebilder. Die Bilder müssen im Namensformat 'Glockebezug-038.jpg' vorliegen.

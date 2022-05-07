@@ -3,8 +3,8 @@ var SetSattelGlocke = new function() {
     var self = this;
 
     self.preis = '35.-';
-    self.preisVersand = '9.-';
-    self.preisTotal = '44.-';
+    self.preisVersand = '10.-';
+    self.preisTotal = '45.-';
 
 
     self.buy = function(bundle) {
