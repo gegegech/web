@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js index" lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Der peppige Velo Sattelüberzug | gegege.ch</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300|Roboto:100" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/">
+    <link rel="shortcut icon" href="../images/logo-gegege4.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="startseite">
+
+            <div class="products">
+                <h3>Sofort kaufen :)</h3>
+                <a style="display: block; text-align: center;" href="/">Zur normalen Seite</a>
+                <div id="articles"></div>
+            </div>
+
+            <div id="goToCheckout" onclick="displayOrder();"><p>Bestellen</p></div>
+
+            <div id="confirmOrderForm" style="display: none;"></div>
+
+            <div id="buyForm" style="display: none;">
+                <div class="formBackground" onclick="hideBuy();"></div>
+                <form id="orderform" action="" method="post" enctype="multipart/form-data">
+
+                <input type="hidden" name="id" id="id" value="">
+        
+                <i class="close fa fa-times" aria-hidden="true" onclick="hideBuy();"></i>
+                
+                <h3>Jetzt bestellen</h3>
+                <!-- p>CHF <span class="preis"></span><br>Aktion: Versandkosten gratis!</p -->
+                <p>CHF <span id="preisBuyForm"></span><br> + Versand CHF <span id="preisBuyFormVersand">10.-</span> (A-Post)</p>
+                <div>
+                    <label for="firstName">Vorname:</label>
+                    <input name="firstName" id="firstName" placeholder="Vorname">
+        
+                    <label for="lastName">Nachname:</label>
+                    <input name="lastName" id="lastName" placeholder="Nachname">
+                </div>
+                <div class="long">
+                    <label for="street">Strasse und Nummer:</label>
+                    <input name="street" id="street" placeholder="Strasse">
+                </div>
+        
+                <div>
+                    <label for="PLZ">PLZ:</label>
+                    <input class="plz" name="PLZ" id="PLZ" placeholder="PLZ">
+        
+                    <label for="place">Ort:</label>
+                    <input class="ort" name="place" id="place" placeholder="Ort">
+                </div>
+        
+                <div class="long">
+                    <label for="Email">E-Mail:</label>
+                    <input name="Email" id="Email" placeholder="E-Mail">
+                </div>
+        
+                <div class="long">
+                    <label for="text">Bemerkungen:</label>
+                    <textarea id="remarks" name="remarks" rows="4" cols="30" placeholder="Bemerkungen"></textarea>
+                </div>
+        
+                <div>
+                    <input type="submit" value="Senden">
+                </div>
+                </form>
+            </div>
+
+
+            <div class="footer">
+                <div>Mirjam Mazza &nbsp;|&nbsp; Schönholzweg 24 &nbsp;|&nbsp; 8409 Winterthur &nbsp;|&nbsp; <a href="tel:+41522020259">+41 52 202 02 59</a> &nbsp;|&nbsp; <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#58;info&#064;gegege&#46;ch?Subject=Mail%20via%20gegege.ch">info&#064;gegege.ch</a></div>
+                <div>
+                    <a href="https://www.facebook.com/Gegege.ch" target="_blank"><i class="fa fa-facebook social-button" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/gegege_veloaccessoires/" target="_blank"><i class="fa fa-instagram social-button" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="impressumlink"><a href="impressum.html">Impressum</a></div>
+    </div>
+
+    <script src="list.js"></script>
+    <script src="order.js"></script>
+    <script src="prices.js"></script>
+</body>
+</html>
+

@@ -159,6 +159,11 @@ gulp.task('html', function(done) {
 
 //migrating over all HTML files for deployment
 gulp.task('html-deploy', function(done) {
+    // copy the whole grossbestellung app to docs. (No fancy SCSS or JS compilation)
+    gulp.src('app/grossbestellung/**')
+        .pipe(plumber())
+        .pipe(gulp.dest('docs/grossbestellung'))
+
     //grab everything, which should include htaccess, robots, etc
     gulp.src('app/*')
         //prevent pipe breaking caused by errors from gulp plugins
@@ -231,6 +236,7 @@ gulp.task('default', gulp.series(gulp.parallel('browserSync', 'scripts', 'styles
     gulp.watch('app/styles/scss/**', gulp.series('styles'));
     gulp.watch('app/images/**', gulp.series('images'));
     gulp.watch('app/*.html', gulp.series('html'));
+    gulp.watch('app/grossbestellung/**', gulp.series('html'));
     done();
 }));
 

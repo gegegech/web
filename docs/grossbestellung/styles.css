@@ -1,0 +1,291 @@
+
+
+
+/* FONTS */
+@font-face {font-family: 'Madelyn-Regular';src: url('../fonts/Madelyn/34627C_0_0.eot');src: url('../fonts/Madelyn/34627C_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/Madelyn/34627C_0_0.woff2') format('woff2'),url('../fonts/Madelyn/34627C_0_0.woff') format('woff'),url('../fonts/Madelyn/34627C_0_0.ttf') format('truetype');}
+@font-face {font-family: 'MadelynDoodles-Regular';src: url('../fonts/Madelyn/34627C_1_0.eot');src: url('../fonts/Madelyn/34627C_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/Madelyn/34627C_1_0.woff2') format('woff2'),url('../fonts/Madelyn/34627C_1_0.woff') format('woff'),url('../fonts/Madelyn/34627C_1_0.ttf') format('truetype');}
+@font-face {font-family: 'MadelynDoodlesFill-Regular';src: url('../fonts/Madelyn/34627C_2_0.eot');src: url('../fonts/Madelyn/34627C_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/Madelyn/34627C_2_0.woff2') format('woff2'),url('../fonts/Madelyn/34627C_2_0.woff') format('woff'),url('../fonts/Madelyn/34627C_2_0.ttf') format('truetype');}
+@font-face {font-family: 'MadelynFill-Regular';src: url('../fonts/Madelyn/34627C_3_0.eot');src: url('../fonts/Madelyn/34627C_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/Madelyn/34627C_3_0.woff2') format('woff2'),url('../fonts/Madelyn/34627C_3_0.woff') format('woff'),url('../fonts/Madelyn/34627C_3_0.ttf') format('truetype');}
+
+/* general styling */
+body {
+    margin: 0;
+    font-family: 'Roboto Slab',serif;
+}
+
+html::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../images/background.jpg);
+    opacity: 0.5;
+}
+
+a {
+    color: rgba(0, 0, 0, 0.75); 
+}
+
+/* form styling */
+.formBackground {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+/* Footer */
+.footer {
+    color: white;
+    background-color: rgba(100, 100, 100, 0.9);
+    text-align: center;
+    padding: 30px 0 10px 0;
+    width: 80vmin;
+    margin: auto;
+}
+  
+.footer .social-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(50, 50, 50, 0.9);
+    line-height: 40px;
+    margin: 20px 10px;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+}
+
+.impressumlink {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* sofort bestellen Styling */
+.products h3 {
+    font-family: 'MadelynFill-Regular','Indie Flower',cursive;
+    font-size: 400%;
+    font-weight: lighter;
+    line-height: 50px;
+    padding: 3% 1% 0% 1%;
+    margin: 0;
+    text-align: center;
+}
+
+.products {
+    background: rgba(245,245,245,.9);
+    padding: 0;
+    top:0;
+    width: 80vmin;
+    margin: auto;
+}
+
+/* ITEMS */
+/* ALIGN THE ITEMS */
+.bundle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.bundle div {
+    position: relative;
+    margin: 1vmin;
+    height: 20vmin;
+    width: 20vmin;
+}
+
+.itemImage {
+    width: 20vmin;
+    height: 20vmin;
+    position: relative;
+}
+
+.itemImageSmall {
+    width: 40%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 2%;
+    background: rgba(0, 0, 0, .7);
+}
+
+/* STYLE THE INPUT FIELDS */
+.count {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 20%;
+    display: block;
+    padding: 0;
+    border: 0;
+    background-color: rgba(209, 209, 209, 0.9);
+    text-align: center;
+    font-size: 2vmin;
+}
+
+.count:focus {
+    outline: 0;
+}
+
+/* REMOVE BUTTONS IN INPUT FIELD */
+/* Chrome, Safari, Edge, Opera */
+.count::-webkit-outer-spin-button,
+.count::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+.count {
+  -moz-appearance: textfield;
+}
+
+/* BESTELLEN-BUTTON */
+#goToCheckout {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, .9);
+    color: rgb(255, 255, 255);
+    font-size: 150%;
+}
+#goToCheckout p {
+    margin: 0;
+}
+
+/* CONFIRM ORDER */
+#confirmOrderForm {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#confirmOrderForm table {
+    display: relative;
+    font-size: 150%;
+    background-color: white;
+    position: relative;
+}
+
+#confirmOrderForm td {
+    padding: 0 5vw;
+}
+
+.orderedItem {
+    position: relative;
+    margin: auto;
+    height: 20vmin;
+    width: 20vmin;
+}
+
+#confirmOrderButton {
+    border: 2px rgb(0,0,0) solid;
+    padding: 2px 8px;
+}
+
+#confirmOrderButton:hover {
+    color: white;
+    background-color: black;
+}
+
+#confirmOrderForm .container {
+    position: relative;
+    top: 0;
+    width: fit-content;
+    margin: 10px auto 10px auto;
+}
+
+#confirmOrderForm i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 4vw;
+    margin: 10px 15px;
+}
+
+#confirmOrderForm i:hover {
+    color: rgb(100, 100, 100);
+}
+
+/* buy order */
+label {
+    display: none;
+}
+
+#buyForm {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-align: center;
+    font-size: 150%;
+}
+
+#buyForm form {
+    position: relative;
+    display: block;
+    background-color: white;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#buyForm i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 4vw;
+    margin: 10px 15px;
+}
+
+#buyForm i:hover {
+    color: rgb(100, 100, 100);
+}
+
+input,textarea {
+    width: 50%;
+    margin: 0.5vw;
+    padding: 0.5vw;
+    border-radius: 0;
+    border: 1px solid;
+    font-size: 100%;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#orderform div {
+    width: 100%;
+    position: relative;
+    top: 0;
+    display: flex;
+
+}
+
+.long input,
+.long textarea {
+    width: 100%;
+}
