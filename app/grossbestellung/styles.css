@@ -290,6 +290,11 @@ textarea {
     width: 100%;
 }
 
+#buy:hover {
+    background-color: black;
+    color: white;
+}
+
 /* THANK YOU PAGE */
 #Thankyou {
     position: absolute;

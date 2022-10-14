@@ -116,6 +116,8 @@ hideBuy = function() {
 
 $( "#buyForm" ).submit(function( event ) {
     event.preventDefault();
+
+    document.getElementById("buy").value = "laden...";
     
     requestObj = {}
 
@@ -192,9 +194,11 @@ $( "#buyForm" ).submit(function( event ) {
         success: function(){
             hideBuy();
             document.getElementById("Thankyou").style.display = "block";
+            document.getElementById("buy").value = "Senden";
         },
         error: function(d) {
             alert("Something went wrong... Please contact us at info@gegege.ch!");
+            document.getElementById("buy").value = "Senden";
         }
     });
 });
