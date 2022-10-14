@@ -289,3 +289,28 @@ textarea {
 .long textarea {
     width: 100%;
 }
+
+/* THANK YOU PAGE */
+#Thankyou {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+
+#Thankyou i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 4vw;
+    margin: 10px 15px;
+}
+
+#Thankyou .container {
+    position: relative;
+    top: 0;
+    background-color: white;
+    text-align: center;
+    margin: 10px auto;
+    padding: 1vw;
+    width: fit-content;
+}

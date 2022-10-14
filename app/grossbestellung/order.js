@@ -187,13 +187,19 @@ $( "#buyForm" ).submit(function( event ) {
     $.ajax({
         type: "POST",
         // url: "https://gegege-backend.herokuapp.com/orderBig",
-        url: "http://127.0.0.1:8080/orderBig",
+        url: "https://gegege-backend.herokuapp.com/orderBig",
         data: new URLSearchParams(requestForm).toString(),
         success: function(){
-            alert("Danke für die Bestellung!");
+            hideBuy();
+            document.getElementById("Thankyou").style.display = "block";
         },
         error: function(d) {
             alert("Something went wrong... Please contact us at info@gegege.ch!");
         }
     });
 });
+
+
+hideThankyou = function() {
+    document.getElementById("Thankyou").style.display = "none";
+}
