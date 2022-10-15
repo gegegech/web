@@ -101,7 +101,17 @@ var createList = new function() {
 
 
     self.createList = function() {
-        var html = '';
+        var html = '<div id="priceTitle" class="bundle">'
+        + '<div>'
+        + '<p>15.-</p>'
+        + '</div>'
+        + '<div>'
+        + '<p>7.-</p>'
+        + '</div>'
+        + '<div  style="display:none;">'
+        + '<p>22.-</p>'
+        + '</div>'
+        + '</div>\n';
         for (var i in self.list) {
             html += getHtmlForOneBundle(self.list[i]);
         }
@@ -112,16 +122,16 @@ var createList = new function() {
         var html = '<div class="bundle">'
              + '<div>'
              + '<img class="itemImage" src="../images/sattelbezug-small/Sattelbezug-' + bundle.Sattel + '.jpg" />'
-             + '<input id="' + encodeURIComponent(JSON.stringify(bundle)) + "sattel" + '" type="number" min="0" value="0" class="count"></input>'
+             + '<input id="' + encodeURIComponent(JSON.stringify(bundle)) + "sattel" + '" type="number" min="0" value="0" class="count" onchange="computePrice();"></input>'
              + '</div>'
              + '<div>'
              + '<img class="itemImage" src="../images/glocke-small/Veloglocke-' + bundle.Glocke + '.jpg" />'
-             + '<input id="' + encodeURIComponent(JSON.stringify(bundle)) + "glocke" + '" type="number" min="0" value="0" class="count"></input>'
+             + '<input id="' + encodeURIComponent(JSON.stringify(bundle)) + "glocke" + '" type="number" min="0" value="0" class="count" onchange="computePrice();"></input>'
              + '</div>'
-             + '<div>'
+             + '<div style="display:none;">'
              + '<img class="itemImage" src="../images/sattelbezug-small/Sattelbezug-' + bundle.Sattel + '.jpg" />'
              + '<img class="itemImageSmall" src="../images/glocke-small/Veloglocke-' + bundle.Glocke + '.jpg" />'
-             + '<input id="' + encodeURIComponent(JSON.stringify(bundle)) + "set" + '" type="number" min="0" value="0" class="count"></input>'
+             + '<input id="' + encodeURIComponent(JSON.stringify(bundle)) + "set" + '" type="number" min="0" value="0" class="count" onchange="computePrice();"></input>'
              + '</div>'
              + '</div>\n';
         return html;

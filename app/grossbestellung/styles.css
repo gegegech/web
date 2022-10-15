@@ -121,6 +121,12 @@ a {
     background: rgba(0, 0, 0, .7);
 }
 
+#priceTitle div {
+    font-size: 150%;
+    height: fit-content;
+    text-align: center;
+}
+
 /* STYLE THE INPUT FIELDS */
 .count {
     position: absolute;
@@ -155,6 +161,7 @@ a {
 
 /* BESTELLEN-BUTTON */
 #goToCheckout {
+    text-align: center;
     position: fixed;
     right: 0;
     top: 0;
@@ -163,8 +170,14 @@ a {
     color: rgb(255, 255, 255);
     font-size: 150%;
 }
+#goToCheckout:hover {
+    color: rgb(150, 150, 150);
+}
 #goToCheckout p {
     margin: 0;
+}
+#minVal, #currPrice {
+    font-size: 50%;
 }
 
 /* CONFIRM ORDER */
