@@ -1,5 +1,5 @@
-var priceSaddle = 15;
-var priceBell = 7;
+var priceSaddle = 25;
+var priceBell = 14;
 
 computePrice = function() {
     var orderedItems = collectOrder();

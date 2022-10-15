@@ -87,6 +87,24 @@
             </div>
 
 
+            <div id="loginButton" onclick="displayLogin();"><p>Login<br><span style="font-size: 50%;">(nur für Händler)</span></p></div>
+            <div id="loggedInIcon" style="display: none;"><p>Angemeldet<br><span style="font-size: 50%;">(zum Abmelden Tab schliessen)</span></p></div>
+
+            <div id="loginForm" style="display: none;">
+                <div class="formBackground" onclick="hideLogin();"></div>
+                <div class="container">
+                    <h3>Login (nur für Händler)</h3>
+                    <p id="wrongPassword" style="display: none; color: red;">Passwort ist falsch</p>
+                    <div>
+                        <label for="password">Bemerkungen:</label>
+                        <input type="password" id="password" name="password" placeholder="Passwort"></textarea>
+                        <input id="buy" type="submit" value="Senden" onclick="login();">
+                    </div>
+                    <i class="close fa fa-times" aria-hidden="true" onclick="hideLogin();"></i>
+                </div>
+            </div>
+
+
             <div class="footer">
                 <div>Mirjam Mazza &nbsp;|&nbsp; Schönholzweg 24 &nbsp;|&nbsp; 8409 Winterthur &nbsp;|&nbsp; <a href="tel:+41522020259">+41 52 202 02 59</a> &nbsp;|&nbsp; <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#58;info&#064;gegege&#46;ch?Subject=Mail%20via%20gegege.ch">info&#064;gegege.ch</a></div>
                 <div>
@@ -97,10 +115,12 @@
         </div>
         <div class="impressumlink"><a href="impressum.html">Impressum</a></div>
     </div>
-
+    
+    <script src="prices.js"></script>
+    <script src="login.js"></script>
     <script src="list.js"></script>
     <script src="order.js"></script>
-    <script src="prices.js"></script>
+    <script>collectOrder();</script>
 </body>
 </html>
 

@@ -103,10 +103,10 @@ var createList = new function() {
     self.createList = function() {
         var html = '<div id="priceTitle" class="bundle">'
         + '<div>'
-        + '<p>15.-</p>'
+        + '<p id="priceSaddle">' + priceSaddle.toString() + '.-</p>'
         + '</div>'
         + '<div>'
-        + '<p>7.-</p>'
+        + '<p id="priceBell">' + priceBell.toString() + '.-</p>'
         + '</div>'
         + '<div  style="display:none;">'
         + '<p>22.-</p>'
