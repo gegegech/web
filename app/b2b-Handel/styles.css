@@ -397,3 +397,9 @@ textarea {
 #loggedInIcon p {
     margin: 0;
 }
+
+@media (max-width:800px) {
+    .startseite {
+        margin-top: 150px;
+    }
+}
