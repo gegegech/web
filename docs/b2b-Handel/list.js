@@ -108,8 +108,8 @@ var createList = new function() {
         + '<div>'
         + '<p id="priceBell"></p>'
         + '</div>'
-        + '<div  style="display:none;">'
-        + '<p>22.-</p>'
+        + '<div>'
+        + '<p id="priceSet"></p>'
         + '</div>'
         + '</div>\n';
         for (var i in self.list) {
@@ -128,7 +128,7 @@ var createList = new function() {
              + '<img class="itemImage" src="../images/glocke-small/Veloglocke-' + bundle.Glocke + '.jpg" />'
              + '<input id="' + encodeURIComponent(JSON.stringify(bundle)) + "glocke" + '" type="number" min="0" value="0" class="count" onchange="computePrice();"></input>'
              + '</div>'
-             + '<div style="display:none;">'
+             + '<div>'
              + '<img class="itemImage" src="../images/sattelbezug-small/Sattelbezug-' + bundle.Sattel + '.jpg" />'
              + '<img class="itemImageSmall" src="../images/glocke-small/Veloglocke-' + bundle.Glocke + '.jpg" />'
              + '<input id="' + encodeURIComponent(JSON.stringify(bundle)) + "set" + '" type="number" min="0" value="0" class="count" onchange="computePrice();"></input>'

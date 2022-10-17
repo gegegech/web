@@ -23,6 +23,7 @@ login = function() {
             hideLogin();
             document.getElementById("priceSaddle").innerHTML = priceSaddle.toString() + ".-";
             document.getElementById("priceBell").innerHTML = priceBell.toString() + ".-";
+            document.getElementById("priceSet").innerHTML = (priceSaddle+priceBell).toString() + ".-";
             document.getElementById("loginButton").style.display = "none";
             document.getElementById("loggedInIcon").style.display = "block";
             computePrice();
