@@ -96,7 +96,7 @@ buy = function() {
             priceForThisItem = priceBell;
         }
         if (type == 3) {
-            priceForThisItem = priceSet;
+            priceForThisItem = priceSaddle + priceBell;
         }
 
         totalPrice += priceForThisItem*amount;
@@ -162,7 +162,7 @@ $( "#buyForm" ).submit(function( event ) {
             name = "Set";
             image = '<img src="https://gegege.ch/images/sattelbezug-small/Sattelbezug-' + bundle.Sattel + '.jpg" width="100" height="100" style="width:100px; float:right;"/>' + '<img src="https://gegege.ch/images/glocke-small/Veloglocke-' + bundle.Glocke + '.jpg" width="100" height="100" style="width:100px; float:right;"/>';
             num = bundle.Sattel;
-            priceForThisItem = priceSet;
+            priceForThisItem = priceSaddle + priceBell;
         }
 
         priceForThisItem *= amount;
