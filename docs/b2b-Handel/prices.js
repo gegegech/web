@@ -1,5 +1,5 @@
-var priceSaddle = NaN;
-var priceBell = NaN;
+var priceSaddle = 0;
+var priceBell = 0;
 
 computePrice = function() {
     var orderedItems = collectOrder();
