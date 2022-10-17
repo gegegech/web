@@ -1,5 +1,5 @@
-var priceSaddle = 25;
-var priceBell = 14;
+var priceSaddle = NaN;
+var priceBell = NaN;
 
 computePrice = function() {
     var orderedItems = collectOrder();
@@ -17,7 +17,7 @@ computePrice = function() {
             priceForThisItem = priceBell;
         }
         if (type == 3) {
-            priceForThisItem = priceSet;
+            priceForThisItem = priceSaddle + priceBell;
         }
         totalPrice += priceForThisItem*amount;
     }
