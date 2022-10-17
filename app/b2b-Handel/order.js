@@ -60,7 +60,7 @@ displayOrder = function() {
 
         html += snippet;
     }
-    if (totalPrice < 225 || totalPrice == NaN) return;
+    if (totalPrice < 225) return;
     html += '<tr><td></td><td>Versand:</td><td>' + 10 + '.-</td></tr>';
     totalPrice+=10;
     html += '<tr><td></td><td>Total:</td><td>' + totalPrice + '.-</td></tr>';
