@@ -14,7 +14,7 @@ Entwicklung
 -----------
 
 3. Lupe -> Terminal öffnen
-4. in Terminal zum Entwicklungsverzeichnis gehen: `cd ~/gegege/`
+4. in Terminal zum Entwicklungsverzeichnis gehen: `cd ~/Documents/web/`
 5. in Terminal die Live-Vorschau starten: `gulp`
 6. die Quelldateien in Documents/gegege.ch/app/ nach Wunsch ändern (z.B. Bilder hinzufügen, Javascript anpassen, ... - gemäss "Rezept" unten)
 7. wenn fertig: in Terminal die Live-Vorschau beenden: [control+c]
@@ -69,6 +69,14 @@ Benötigte Software
 * Versionsverwaltung SourceTree: https://www.sourcetreeapp.com
 * npm: https://www.npmjs.com/get-npm
 * update npm to newest version: in terminal, enter `sudo npm install npm@latest -g`
+
+## Für die Installation ohne vollständigen Admin Zugriff
+
+configure NPM to use an already writable location for "user-global" programs:
+`npm config set prefix "${HOME}/npm"`
+
+Then make sure you add that folder to your path (add this to your `~/.zprofile`):
+`export PATH="${PATH}:${HOME}/npm/bin"`
 
 
 Front End Gulp Boilerplate
