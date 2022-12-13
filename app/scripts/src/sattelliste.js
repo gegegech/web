@@ -11,42 +11,7 @@ var sattel = new function() {
     self.gekauft = false;
 
         // Liste aller Sattelbilder. Die Bilder müssen im Namensformat 'Sattelbezug-038.jpg' vorliegen.
-        self.liste = [
-        { "Sattel": "8465", "Glocke": "8562", "Bem": "1 rosa" },
-        { "Sattel": "8429", "Glocke": "8561", "Bem": "1 rosa" },
-        { "Sattel": "8463", "Glocke": "8559", "Bem": "1 rosa" },
-        { "Sattel": "8462", "Glocke": "8558", "Bem": "1 rosa" },
-        { "Sattel": "8461", "Glocke": "8557", "Bem": "1 rosa" },
-        { "Sattel": "8460", "Glocke": "8547", "Bem": "1 rosa" },
-        { "Sattel": "8459", "Glocke": "8560", "Bem": "1 rosa" },
-        { "Sattel": "8428", "Glocke": "8547", "Bem": "2 rot" },
-        { "Sattel": "8449", "Glocke": "8548", "Bem": "2 rot" },
-        { "Sattel": "8457", "Glocke": "8556", "Bem": "2 rot" },
-        { "Sattel": "8456", "Glocke": "8555", "Bem": "2 rot" },
-        { "Sattel": "8455", "Glocke": "8554", "Bem": "2 rot" },
-        { "Sattel": "8453", "Glocke": "8552", "Bem": "3 andere" },
-        { "Sattel": "8454", "Glocke": "8553", "Bem": "3 andere" },
-        { "Sattel": "8452", "Glocke": "8551", "Bem": "3 andere" },
-        { "Sattel": "8451", "Glocke": "8550", "Bem": "3 andere" },
-        { "Sattel": "8450", "Glocke": "8549", "Bem": "3 andere" },
-        { "Sattel": "8447", "Glocke": "8546", "Bem": "3 andere" },
-        { "Sattel": "8446", "Glocke": "8545", "Bem": "3 andere" },
-        { "Sattel": "8445", "Glocke": "8544", "Bem": "3 grün" },
-        { "Sattel": "8444", "Glocke": "8543", "Bem": "3 grün" },
-        { "Sattel": "8443", "Glocke": "8542", "Bem": "3 grün" },
-        { "Sattel": "8442", "Glocke": "8541", "Bem": "3 grün" },
-        { "Sattel": "8441", "Glocke": "8540", "Bem": "4 blau" },
-        { "Sattel": "8440", "Glocke": "8539", "Bem": "4 blau" },
-        { "Sattel": "8439", "Glocke": "8538", "Bem": "4 blau" },
-        { "Sattel": "8438", "Glocke": "8537", "Bem": "4 blau" },
-        { "Sattel": "8437", "Glocke": "8536", "Bem": "4 blau" },
-        { "Sattel": "8435", "Glocke": "8534", "Bem": "4 blau" },
-        { "Sattel": "8436", "Glocke": "8535", "Bem": "4 blau" },
-        { "Sattel": "8434", "Glocke": "8533", "Bem": "5 andere" },
-        { "Sattel": "8433", "Glocke": "8532", "Bem": "5 andere" },
-        { "Sattel": "8432", "Glocke": "8530", "Bem": "5 andere" },
-        { "Sattel": "8431", "Glocke": "8531", "Bem": "5 andere" }
-    ];
+        self.liste = listeSattelGlobal;
 
 
     self.getSattellist = function() {

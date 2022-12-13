@@ -52,7 +52,7 @@ Bild muss 1000x1000 px gross sein, Name muss sein z.B. "Sattelbezug-037.jpg" (Gr
 im Finder: Bilder kopieren ins Verzeichnis Documents/gegege.ch/app/images/sattelbezug-small
 Gleich wie oben, Bild muss 400x400px gross sein
 
-die Datei Documents/gegege.ch/app/scripts/src/sattelliste.js in Visual Studio Code öffnen:
+die Datei Documents/gegege.ch/app/globalLists.js in Visual Studio Code öffnen:
 Die Liste (ab Zeile 12) anpassen und speichern.
 
 
