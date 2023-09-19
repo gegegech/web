@@ -27,7 +27,7 @@ listeSattelGlobal = [
     { "Sattel": "8439", "Glocke": "8538", "Bem": "4 blau" },
     { "Sattel": "8438", "Glocke": "8537", "Bem": "4 blau" },
     { "Sattel": "8437", "Glocke": "8536", "Bem": "4 blau" },
-    { "Sattel": "8435", "Glocke": "8534", "Bem": "4 blau" },
+    // { "Sattel": "8435", "Glocke": "8534", "Bem": "4 blau" },
     // { "Sattel": "8436", "Glocke": "8535", "Bem": "4 blau" },
     { "Sattel": "8434", "Glocke": "8533", "Bem": "5 andere" },
     { "Sattel": "8433", "Glocke": "8532", "Bem": "5 andere" },
