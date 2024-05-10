@@ -1,6 +1,6 @@
 listeSattelGlobal = [
     { "Sattel": "8465", "Glocke": "8562", "Bem": "1 rosa" },
-    { "Sattel": "8474", "Glocke": "8562", "Bem": "4 blau" },
+     //  { "Sattel": "8474", "Glocke": "8562", "Bem": "4 blau" },
     { "Sattel": "8429", "Glocke": "8561", "Bem": "1 rosa" },
     { "Sattel": "8463", "Glocke": "8559", "Bem": "1 rosa" },
     // { "Sattel": "8462", "Glocke": "8558", "Bem": "1 rosa" },
@@ -48,7 +48,7 @@ listeSattelGlobal = [
 
 listeGlockeGlobal = [
     { "Sattel": "8465", "Glocke": "8562", "Bem": "1 rosa" },
-    { "Sattel": "8474", "Glocke": "8562", "Bem": "4 blau" },
+     //  { "Sattel": "8474", "Glocke": "8562", "Bem": "4 blau" },
     { "Sattel": "8429", "Glocke": "8561", "Bem": "1 rosa" },
     { "Sattel": "8463", "Glocke": "8559", "Bem": "1 rosa" },
     // { "Sattel": "8462", "Glocke": "8558", "Bem": "1 rosa" },
