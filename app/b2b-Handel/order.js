@@ -186,8 +186,8 @@ $( "#buyForm" ).submit(function( event ) {
 
     requestObj.items.push({
         type: "Jubiläumsaktion",
-        image: "13%",
-        number: 0,
+        image: "",
+        number: "13%",
         price: Math.round(-totalPriceWithShipping*1.3)/10,
         amount: 1
     });
