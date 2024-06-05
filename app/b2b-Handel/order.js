@@ -61,9 +61,14 @@ displayOrder = function() {
         html += snippet;
     }
     if (totalPrice < 225) return;
+
+    // Rabatt
+    html += '<tr><td></td><td>Jubiläumsaktion:</td><td>-' + (totalPrice*0.13).toFixed(1) + '0</td></tr>';
+    totalPrice-=(totalPrice*0.13).toFixed(1);
+
     html += '<tr><td></td><td>Versand:</td><td>' + 10 + '.-</td></tr>';
     totalPrice+=10;
-    html += '<tr><td></td><td>Total:</td><td>' + totalPrice + '.-</td></tr>';
+    html += '<tr><td></td><td>Total:</td><td> CHF ' + totalPrice.toFixed(1) + '0</td></tr>';
     html += '<tr><td></td><td></td><td>' + '<p id="confirmOrderButton" onclick="buy();">Weiter</p>' + '</td></tr>';
     html += "</table>";
 
@@ -100,6 +105,7 @@ buy = function() {
         }
 
         totalPrice += priceForThisItem*amount;
+        totalPrice-=(totalPrice*0.13).toFixed(1);   // Rabatt
     }
 
     document.getElementById("preisBuyForm").innerHTML = totalPrice;
@@ -136,7 +142,7 @@ $( "#buyForm" ).submit(function( event ) {
     var orderedItems = collectOrder();
 
     if (Object.keys(orderedItems).length == 0) return;
-    var totalPriceWithShipping = 10;
+    var totalPriceWithShipping = 0;
     for (var i in orderedItems) {
         var type = i[i.length-1];
         var bundle = JSON.parse(i.slice(0,-1));
@@ -177,6 +183,18 @@ $( "#buyForm" ).submit(function( event ) {
             amount: amount
         });
     }
+
+    requestObj.items.push({
+        type: "Jubiläumsaktion",
+        image: "13%",
+        number: 0,
+        price: Math.round(-totalPriceWithShipping*1.3)/10,
+        amount: 1
+    });
+
+    totalPriceWithShipping -= Math.round(totalPriceWithShipping*1.3)/10;
+
+    totalPriceWithShipping += 10;
 
     requestObj.total = totalPriceWithShipping;
 

@@ -2,9 +2,9 @@ var glocke = new function() {
 
     var self = this;
 
-    self.preis = '14.-';
+    self.preis = '<s>14.-</s> 12.-';
     self.preisVersand = '10.-';
-    self.preisTotal = '24.-';
+    self.preisTotal = '<s>24.-</s> 22.-';
 
         // Liste aller Glockebilder. Die Bilder müssen im Namensformat 'Glockebezug-038.jpg' vorliegen.
         self.liste = listeGlockeGlobal;
