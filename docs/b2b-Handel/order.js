@@ -63,12 +63,13 @@ displayOrder = function() {
     if (totalPrice < 225) return;
 
     // Rabatt
-    html += '<tr><td></td><td>Jubiläumsaktion:</td><td>-' + (totalPrice*0.13).toFixed(1) + '0</td></tr>';
-    totalPrice-=(totalPrice*0.13).toFixed(1);
+    rabatt = Math.ceil(totalPrice*0.13);
+    html += '<tr><td></td><td>Jubiläumsaktion 13%:</td><td>-' + rabatt + '.-</td></tr>';
+    totalPrice-=rabatt;
 
     html += '<tr><td></td><td>Versand:</td><td>' + 10 + '.-</td></tr>';
     totalPrice+=10;
-    html += '<tr><td></td><td>Total:</td><td> CHF ' + totalPrice.toFixed(1) + '0</td></tr>';
+    html += '<tr><td></td><td>Total:</td><td> CHF ' + totalPrice + '.00</td></tr>';
     html += '<tr><td></td><td></td><td>' + '<p id="confirmOrderButton" onclick="buy();">Weiter</p>' + '</td></tr>';
     html += "</table>";
 
@@ -105,9 +106,11 @@ buy = function() {
         }
 
         totalPrice += priceForThisItem*amount;
-        totalPrice-=(totalPrice*0.13).toFixed(1);   // Rabatt
     }
-
+    
+    rabatt = Math.ceil(totalPrice*0.13);
+    totalPrice -= rabatt;   // Rabatt
+    
     document.getElementById("preisBuyForm").innerHTML = totalPrice;
     document.getElementById("id").value = '#' + Math.random().toString(36).substr(2, 6);
 
@@ -184,15 +187,15 @@ $( "#buyForm" ).submit(function( event ) {
         });
     }
 
+    rabatt = Math.ceil(totalPriceWithShipping*0.13);
     requestObj.items.push({
         type: "Jubiläumsaktion",
         image: "",
         number: "13%",
-        price: Math.round(-totalPriceWithShipping*1.3)/10,
+        price: -rabatt,
         amount: 1
     });
-
-    totalPriceWithShipping -= Math.round(totalPriceWithShipping*1.3)/10;
+    totalPriceWithShipping -= rabatt;
 
     totalPriceWithShipping += 10;
 
