@@ -1,5 +1,5 @@
 listeSattelGlobal = [
-    { "Sattel": "8465", "Glocke": "8562", "Bem": "1 rosa" },
+    //  { "Sattel": "8465", "Glocke": "8562", "Bem": "1 rosa" },
      //  { "Sattel": "8474", "Glocke": "8562", "Bem": "4 blau" },
     { "Sattel": "8429", "Glocke": "8561", "Bem": "1 rosa" },
     { "Sattel": "8463", "Glocke": "8559", "Bem": "1 rosa" },
@@ -23,7 +23,7 @@ listeSattelGlobal = [
     { "Sattel": "8445", "Glocke": "8544", "Bem": "3 grün" },
     { "Sattel": "8444", "Glocke": "8543", "Bem": "3 grün" },
     { "Sattel": "8443", "Glocke": "8542", "Bem": "3 grün" },
-    // { "Sattel": "8476", "Glocke": "8542", "Bem": "3 grün" },
+    { "Sattel": "8476", "Glocke": "8542", "Bem": "3 grün" },
     // { "Sattel": "8442", "Glocke": "8541", "Bem": "3 grün" },
     { "Sattel": "8441", "Glocke": "8540", "Bem": "4 blau" },
     { "Sattel": "8440", "Glocke": "8539", "Bem": "4 blau" },
@@ -48,7 +48,7 @@ listeSattelGlobal = [
 
 
 listeGlockeGlobal = [
-    { "Sattel": "8465", "Glocke": "8562", "Bem": "1 rosa" },
+    //  { "Sattel": "8465", "Glocke": "8562", "Bem": "1 rosa" },
      //  { "Sattel": "8474", "Glocke": "8562", "Bem": "4 blau" },
     { "Sattel": "8429", "Glocke": "8561", "Bem": "1 rosa" },
     { "Sattel": "8463", "Glocke": "8559", "Bem": "1 rosa" },
@@ -78,7 +78,7 @@ listeGlockeGlobal = [
     { "Sattel": "8445", "Glocke": "8544", "Bem": "3 grün" },
     { "Sattel": "8444", "Glocke": "8543", "Bem": "3 grün" },
     { "Sattel": "8443", "Glocke": "8542", "Bem": "3 grün" },
-    // { "Sattel": "8476", "Glocke": "8542", "Bem": "3 grün" },
+    { "Sattel": "8476", "Glocke": "8542", "Bem": "3 grün" },
     // { "Sattel": "8442", "Glocke": "8541", "Bem": "3 grün" },
     { "Sattel": "8441", "Glocke": "8540", "Bem": "4 blau" },
     { "Sattel": "8440", "Glocke": "8539", "Bem": "4 blau" },
