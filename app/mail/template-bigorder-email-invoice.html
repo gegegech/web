@@ -1,3 +1,6 @@
+<!-- THIS FILE SHOULD NOT BE MODIFIED! IT'S JUST A COPY OF THE TEMPLATE AT MAILGUN!! -->
+
+{{#with data}}
 <html>
 <head>
 <meta name="viewport" content="width=device-width" />
@@ -6,14 +9,14 @@
 <link href="https://gegege.ch/mail/styles.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 
-<body itemscope itemtype="http://schema.org/EmailMessage">
+<body itemscope itemtype="http://schema.org/EmailMessage" style="background-color: white;">
 
-<table class="body-wrap">
+<!-- table class="body-wrap">
 	<tr>
 		<td></td>
-		<td class="container" width="600">
-			<div class="content">
-				<table class="main" width="100%" cellpadding="0" cellspacing="0">
+		<td class="container" -->
+			<div class="content" style="max-width: none;">
+				<table class="main" width="100%" cellpadding="0" cellspacing="0" style="border: none;">
 					<tr>
 						<td class="content-wrap aligncenter">
 							<table width="100%" cellpadding="0" cellspacing="0">
@@ -31,21 +34,23 @@
 									<td class="content-block aligncenter">
 										<table class="invoice">
 											<tr>
-												<td>##Vorname## ##Nachname##<br>##Strasse##<br>##PLZ## ##Ort##</td>
+												<td>{{firstname}} {{lastname}}<br>{{street}}<br>{{zipcode}} {{place}}<br>{{email}}</td>
 											</tr>
 											<tr>
-												<td><h3>Rechnung ##DATUM##, ##UHRZEIT##, ##ID##</h3></td>
+												<td><h3>Rechnung {{DATE}}, {{TIME}}, {{id}}</h3></td>
 											</tr>
 											<tr>
 												<td>
 													<table class="invoice-items" cellpadding="0" cellspacing="0">
+                                                        {{#each items}}
 														<tr>
-															<td>Velosattelbezug Nr. ##ArtikelNr## <img src="https://gegegech.github.io/web/images/sattelbezug-small/Sattelbezug-##ArtikelNr##.jpg" width="100" height="100" style="width:100px; float:right;"/></td>
-															<td class="alignright">CHF 25.00</td>
+															<td>{{amount}} x {{type}} Nr. {{number}} {{{image}}}</td>
+															<td class="alignright">CHF {{price}}.00</td>
 														</tr>
+                                                        {{/each}}
 														<tr>
 															<td>Verpackung und Transport</td>
-															<td class="alignright">CHF 2.00</td>
+															<td class="alignright">CHF 10.00</td>
 														</tr>
 														<!-- tr>
 															<td>(nicht MwSt.-pflichtig)</td>
@@ -53,13 +58,13 @@
 														</tr -->
 														<tr class="total">
 															<td class="alignright" width="80%">Total</td>
-															<td class="alignright">CHF 27.00</td>
+															<td class="alignright">CHF {{total}}.00</td>
 														</tr>
 													</table>
 												</td>
 											</tr>
 											<tr>
-												<td>##Bemerkungen##</td>
+												<td>{{Bemerkungen}}</td>
 											</tr>
 										</table>
 									</td>
@@ -88,10 +93,11 @@
 						</tr>
 					</table>
 				</div></div>
-		</td>
+		<!-- /td>
 		<td></td>
 	</tr>
-</table>
+</table -->
 
 </body>
 </html>
+{{/with}}
