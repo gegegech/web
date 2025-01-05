@@ -13,6 +13,10 @@ collectOrder = function() {
         if (document.getElementById(encodeURIComponent(JSON.stringify(createList.list[i]))+"set").value > 0) {
             orderedItems[JSON.stringify(createList.list[i])+"3"] = document.getElementById(encodeURIComponent(JSON.stringify(createList.list[i]))+"set").value;
         }
+
+        if (document.getElementById("packaging").value > 0) {
+            orderedItems["packaging4"] = document.getElementById("packaging").value;
+        }
     }
     return orderedItems;
 }
@@ -28,7 +32,12 @@ displayOrder = function() {
 
         var type = i[i.length-1];
 
+        var bundle;
+        try {
         var bundle = JSON.parse(i.slice(0,-1));
+        }
+        catch(err) {
+        }
 
         var amount = orderedItems[i];
 
@@ -46,6 +55,10 @@ displayOrder = function() {
             snippet += '<img class="itemImage" src="https://gegege.ch/images/sattelbezug-small/Sattelbezug-' + bundle.Sattel + '.jpg" />'
                 + '<img class="itemImageSmall" src="https://gegege.ch/images/glocke-small/Veloglocke-' + bundle.Glocke + '.jpg" />';
             priceForThisItem = priceSaddle + priceBell;
+        }
+        if (type == 4) {
+            snippet += '<img class="itemImage" src="https://gegege.ch/images/packaging/packaging.jpg" />';
+            priceForThisItem = pricePackaging;
         }
 
         snippet += '</div></td>';
@@ -103,6 +116,9 @@ buy = function() {
         }
         if (type == 3) {
             priceForThisItem = priceSaddle + priceBell;
+        }
+        if (type == 4) {
+            priceForThisItem = pricePackaging;
         }
 
         totalPrice += priceForThisItem*amount;
@@ -172,6 +188,12 @@ $( "#buyForm" ).submit(function( event ) {
             image = '<img src="https://gegege.ch/images/sattelbezug-small/Sattelbezug-' + bundle.Sattel + '.jpg" width="100" height="100" style="width:100px; float:right;"/>' + '<img src="https://gegege.ch/images/glocke-small/Veloglocke-' + bundle.Glocke + '.jpg" width="100" height="100" style="width:100px; float:right;"/>';
             num = bundle.Sattel;
             priceForThisItem = priceSaddle + priceBell;
+        }
+        if (type == 4) {
+            name = "Verpackung";
+            image = '<img src="https://gegege.ch/images/packaging/packaging.jpg" width="100" height="100" style="width:100px; float:right;"/>';
+            num = "";
+            priceForThisItem = pricePackaging;
         }
 
         priceForThisItem *= amount;
