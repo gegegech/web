@@ -23,6 +23,7 @@ var createList = new function() {
         for (var i in self.list) {
             html += getHtmlForOneBundle(self.list[i]);
         }
+        html += getHtmlForPackaging();
         return html;
     }
 
@@ -42,6 +43,16 @@ var createList = new function() {
              + '<input id="' + encodeURIComponent(JSON.stringify(bundle)) + "set" + '" type="number" min="0" value="0" class="count" onchange="computePrice();"></input>'
              + '</div>'
              + '</div>\n';
+        return html;
+    }
+
+    getHtmlForPackaging = function() {
+        var html = '<div class="bundle">'
+            + '<div>'
+            + '<img class="itemImage" src="../images/packaging/packaging.jpg" />'
+            + '<input id="' + "packaging" + '" type="number" min="0" value="0" class="count" onchange="computePrice();"></input>'
+            + '</div>'
+            + '</div>\n';
         return html;
     }
 
