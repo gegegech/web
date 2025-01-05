@@ -34,7 +34,7 @@ displayOrder = function() {
 
         var bundle;
         try {
-        var bundle = JSON.parse(i.slice(0,-1));
+            var bundle = JSON.parse(i.slice(0,-1));
         }
         catch(err) {
         }
@@ -76,8 +76,8 @@ displayOrder = function() {
     if (totalPrice < 225) return;
 
     // Rabatt
-    rabatt = Math.ceil(totalPrice*0.13);
-    html += '<tr><td></td><td>Jubiläumsaktion 13%:</td><td>-' + rabatt + '.-</td></tr>';
+    rabatt = Math.ceil(totalPrice*0.10);
+    html += '<tr><td></td><td>Rabattaktion 10%:</td><td>-' + rabatt + '.-</td></tr>';
     totalPrice-=rabatt;
 
     html += '<tr><td></td><td>Versand:</td><td>' + 10 + '.-</td></tr>';
@@ -124,7 +124,7 @@ buy = function() {
         totalPrice += priceForThisItem*amount;
     }
     
-    rabatt = Math.ceil(totalPrice*0.13);
+    rabatt = Math.ceil(totalPrice*0.10);
     totalPrice -= rabatt;   // Rabatt
     
     document.getElementById("preisBuyForm").innerHTML = totalPrice;
@@ -164,7 +164,12 @@ $( "#buyForm" ).submit(function( event ) {
     var totalPriceWithShipping = 0;
     for (var i in orderedItems) {
         var type = i[i.length-1];
-        var bundle = JSON.parse(i.slice(0,-1));
+        var bundle;
+        try {
+            var bundle = JSON.parse(i.slice(0,-1));
+        }
+        catch(err) {
+        }
         var amount = orderedItems[i];
         
         var priceForThisItem;
@@ -213,7 +218,7 @@ $( "#buyForm" ).submit(function( event ) {
     requestObj.items.push({
         type: "Jubiläumsaktion",
         image: "",
-        number: "13%",
+        number: "10%",
         price: -rabatt,
         amount: 1
     });

@@ -164,7 +164,12 @@ $( "#buyForm" ).submit(function( event ) {
     var totalPriceWithShipping = 0;
     for (var i in orderedItems) {
         var type = i[i.length-1];
-        var bundle = JSON.parse(i.slice(0,-1));
+        var bundle;
+        try {
+            var bundle = JSON.parse(i.slice(0,-1));
+        }
+        catch(err) {
+        }
         var amount = orderedItems[i];
         
         var priceForThisItem;
