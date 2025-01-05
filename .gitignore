@@ -5,4 +5,3 @@ app/styles/styles.css
 app/scripts/app.js
 .idea/
 package-lock.json
-shell.nix
