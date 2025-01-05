@@ -1,7 +1,7 @@
 var priceSaddle = 0;
 var priceBell = 0;
-var pricePackaging = 1;
-// var pricePackaging = 0;
+// var pricePackaging = 1;
+var pricePackaging = 0;
 
 computePrice = function() {
     var orderedItems = collectOrder();
