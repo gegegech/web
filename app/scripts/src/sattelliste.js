@@ -5,9 +5,9 @@ var sattel = new function() {
 
     var self = this;
 
-    self.preis = '25.-';
+    self.preis = '<s>25.-</s> 21.75';
     self.preisVersand = '3.-';
-    self.preisTotal = '28.-';
+    self.preisTotal = '<s>28.-</s> 24.75';
     self.gekauft = false;
 
         // Liste aller Sattelbilder. Die Bilder müssen im Namensformat 'Sattelbezug-038.jpg' vorliegen.

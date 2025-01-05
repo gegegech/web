@@ -4,6 +4,24 @@ html::after {
 
 /* --------------------------- */
 
+.sale {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  color: rgb(224, 161, 10);
+  background-color: rgba(245, 245, 245, 0.9);
+  text-align: center;
+  padding-bottom: 0.3em;
+  border-bottom: solid 1px;
+}
+
+s { // strikethrought red
+  color: rgb(224, 161, 10);
+}
+
+/* --------------------------- */
+
 .startseite {
     position: relative;
     display: block;
@@ -286,6 +304,7 @@ h3 {
 
 .form {
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     width: 100%;
@@ -297,8 +316,8 @@ h3 {
 }
 
 .close {
-    z-index: 1;
     position: absolute;
+    z-index: 100;
     right: 0;
     top: 0;
     width: 40px;
@@ -346,7 +365,7 @@ h3 {
     margin: 0 auto;	
     padding: 20px;	
     background: white;	
-    z-index: 1;	
+    z-index: 100;	
     height: 100%;	
     overflow: scroll;	
     text-align: center;	
@@ -444,7 +463,7 @@ h3 {
     margin: 0 auto;	
     padding: 20px;	
     background: white;	
-    z-index: 1;	
+    z-index: 100;	
     height: 100%;	
     overflow: scroll;	
     text-align: center;	
@@ -459,7 +478,7 @@ h3 {
     margin: 0 auto;	
     padding: 20px;	
     background: white;	
-    z-index: 1;	
+    z-index: 100;	
     height: 100%;	
     overflow: scroll;	
     text-align: center;	
@@ -488,7 +507,7 @@ form > div {
     margin: 0 auto;
     padding: 20px;
     background: white;
-    z-index: 1;
+    z-index: 100;
     height: 100%;
     overflow: scroll;
 }

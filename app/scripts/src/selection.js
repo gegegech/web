@@ -8,8 +8,8 @@ var selector = new function() {
         }
         var picSattel = '<img src="images/sattelbezug-large/Sattelbezug-' + global.selected.Sattel + '.jpg" />';
         var picGlocke = '<img src="images/glocke-large/Veloglocke-' + global.selected.Glocke + '.jpg" />';
-        var priceSattel = "25.-";
-        var priceGlocke = "14.-";
+        var priceSattel = '<s>25.-</s> 21.75';
+        var priceGlocke = '<s>14.-</s> 12.-';
         document.getElementById("picSattelbezug").innerHTML = picSattel + '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + priceSattel + '</div>';
         document.getElementById("picGlocke").innerHTML = picGlocke + '<div class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ' + priceGlocke + '</div>';
         $('#chooseProduct').removeClass('hidden');

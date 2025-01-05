@@ -13,10 +13,6 @@ collectOrder = function() {
         if (document.getElementById(encodeURIComponent(JSON.stringify(createList.list[i]))+"set").value > 0) {
             orderedItems[JSON.stringify(createList.list[i])+"3"] = document.getElementById(encodeURIComponent(JSON.stringify(createList.list[i]))+"set").value;
         }
-
-        if (document.getElementById("packaging").value > 0) {
-            orderedItems["packaging4"] = document.getElementById("packaging").value;
-        }
     }
     return orderedItems;
 }
@@ -32,12 +28,7 @@ displayOrder = function() {
 
         var type = i[i.length-1];
 
-        var bundle;
-        try {
         var bundle = JSON.parse(i.slice(0,-1));
-        }
-        catch(err) {
-        }
 
         var amount = orderedItems[i];
 
@@ -56,10 +47,6 @@ displayOrder = function() {
                 + '<img class="itemImageSmall" src="https://gegege.ch/images/glocke-small/Veloglocke-' + bundle.Glocke + '.jpg" />';
             priceForThisItem = priceSaddle + priceBell;
         }
-        if (type == 4) {
-            snippet += '<img class="itemImage" src="https://gegege.ch/images/packaging/packaging.jpg" />';
-            priceForThisItem = pricePackaging;
-        }
 
         snippet += '</div></td>';
 
@@ -74,9 +61,15 @@ displayOrder = function() {
         html += snippet;
     }
     if (totalPrice < 225) return;
+
+    // Rabatt
+    rabatt = Math.ceil(totalPrice*0.13);
+    html += '<tr><td></td><td>Jubiläumsaktion 13%:</td><td>-' + rabatt + '.-</td></tr>';
+    totalPrice-=rabatt;
+
     html += '<tr><td></td><td>Versand:</td><td>' + 10 + '.-</td></tr>';
     totalPrice+=10;
-    html += '<tr><td></td><td>Total:</td><td>' + totalPrice + '.-</td></tr>';
+    html += '<tr><td></td><td>Total:</td><td> CHF ' + totalPrice + '.00</td></tr>';
     html += '<tr><td></td><td></td><td>' + '<p id="confirmOrderButton" onclick="buy();">Weiter</p>' + '</td></tr>';
     html += "</table>";
 
@@ -111,13 +104,13 @@ buy = function() {
         if (type == 3) {
             priceForThisItem = priceSaddle + priceBell;
         }
-        if (type == 4) {
-            priceForThisItem = pricePackaging;
-        }
 
         totalPrice += priceForThisItem*amount;
     }
-
+    
+    rabatt = Math.ceil(totalPrice*0.13);
+    totalPrice -= rabatt;   // Rabatt
+    
     document.getElementById("preisBuyForm").innerHTML = totalPrice;
     document.getElementById("id").value = '#' + Math.random().toString(36).substr(2, 6);
 
@@ -152,7 +145,7 @@ $( "#buyForm" ).submit(function( event ) {
     var orderedItems = collectOrder();
 
     if (Object.keys(orderedItems).length == 0) return;
-    var totalPriceWithShipping = 10;
+    var totalPriceWithShipping = 0;
     for (var i in orderedItems) {
         var type = i[i.length-1];
         var bundle = JSON.parse(i.slice(0,-1));
@@ -180,12 +173,6 @@ $( "#buyForm" ).submit(function( event ) {
             num = bundle.Sattel;
             priceForThisItem = priceSaddle + priceBell;
         }
-        if (type == 4) {
-            name = "Verpackung";
-            image = '<img src="https://gegege.ch/images/packaging/packaging.jpg" width="100" height="100" style="width:100px; float:right;"/>';
-            num = "";
-            priceForThisItem = pricePackaging;
-        }
 
         priceForThisItem *= amount;
 
@@ -199,6 +186,18 @@ $( "#buyForm" ).submit(function( event ) {
             amount: amount
         });
     }
+
+    rabatt = Math.ceil(totalPriceWithShipping*0.13);
+    requestObj.items.push({
+        type: "Jubiläumsaktion",
+        image: "",
+        number: "13%",
+        price: -rabatt,
+        amount: 1
+    });
+    totalPriceWithShipping -= rabatt;
+
+    totalPriceWithShipping += 10;
 
     requestObj.total = totalPriceWithShipping;
 
