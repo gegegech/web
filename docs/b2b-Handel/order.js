@@ -214,7 +214,7 @@ $( "#buyForm" ).submit(function( event ) {
         });
     }
 
-    rabatt = Math.ceil(totalPriceWithShipping*0.10);
+    rabatt = Math.ceil(totalPriceWithShipping*0.13);
     requestObj.items.push({
         type: "Jubiläumsaktion",
         image: "",
