@@ -34,7 +34,7 @@ displayOrder = function() {
 
         var bundle;
         try {
-        var bundle = JSON.parse(i.slice(0,-1));
+            var bundle = JSON.parse(i.slice(0,-1));
         }
         catch(err) {
         }
@@ -117,7 +117,6 @@ buy = function() {
 
         totalPrice += priceForThisItem*amount;
     }
-
     document.getElementById("preisBuyForm").innerHTML = totalPrice;
     document.getElementById("id").value = '#' + Math.random().toString(36).substr(2, 6);
 
@@ -155,7 +154,12 @@ $( "#buyForm" ).submit(function( event ) {
     var totalPriceWithShipping = 10;
     for (var i in orderedItems) {
         var type = i[i.length-1];
-        var bundle = JSON.parse(i.slice(0,-1));
+        var bundle;
+        try {
+            var bundle = JSON.parse(i.slice(0,-1));
+        }
+        catch(err) {
+        }
         var amount = orderedItems[i];
         
         var priceForThisItem;
