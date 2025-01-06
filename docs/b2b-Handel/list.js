@@ -49,6 +49,9 @@ var createList = new function() {
     getHtmlForPackaging = function() {
         var html = '<div class="bundle">'
             + '<div>'
+            + '<p style="font-size:150%;transform: translate(-50%,-50%);top:50%;left:50%;margin:0;position:absolute;">'+pricePackaging+'.-</p>'
+            + '</div>'
+            + '<div>'
             + '<img class="itemImage" src="../images/packaging/packaging.jpg" />'
             + '<input id="' + "packaging" + '" type="number" min="0" value="0" class="count" onchange="computePrice();"></input>'
             + '</div>'
