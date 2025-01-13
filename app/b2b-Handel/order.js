@@ -77,7 +77,7 @@ displayOrder = function() {
 
     // Rabatt
     rabatt = Math.ceil(totalPrice*0.10);
-    html += '<tr><td></td><td>Rabattaktion 10%:</td><td>-' + rabatt + '.-</td></tr>';
+    html += '<tr><td></td><td>Neujahrsaktion 10%:</td><td>-' + rabatt + '.-</td></tr>';
     totalPrice-=rabatt;
 
     html += '<tr><td></td><td>Versand:</td><td>' + 10 + '.-</td></tr>';
@@ -216,7 +216,7 @@ $( "#buyForm" ).submit(function( event ) {
 
     rabatt = Math.ceil(totalPriceWithShipping*0.10);
     requestObj.items.push({
-        type: "Jubiläumsaktion",
+        type: "Neujahrsaktion",
         image: "",
         number: "10%",
         price: -rabatt,
