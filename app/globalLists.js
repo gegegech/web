@@ -7,6 +7,7 @@ listeSattelGlobal = [
     // { "Sattel": "8461", "Glocke": "8557", "Bem": "1 rosa" },
     // { "Sattel": "8473", "Glocke": "8557", "Bem": "4 blau" },
     { "Sattel": "8460", "Glocke": "8547", "Bem": "1 rosa" },
+    { "Sattel": "8459", "Glocke": "8560", "Bem": "1 rosa" },
     // { "Sattel": "8428", "Glocke": "8547", "Bem": "2 rot" },
     // { "Sattel": "8449", "Glocke": "8548", "Bem": "2 rot" },
     { "Sattel": "8457", "Glocke": "8556", "Bem": "2 rot" },
