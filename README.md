@@ -1,6 +1,9 @@
 ANLEITUNG für Massimo
 =====================
 
+WICHTIG:
+- `app`: development
+- `docs`: kompilierte Dateien
 
 Vorbereitung
 ------------
