@@ -76,8 +76,8 @@ displayOrder = function() {
     if (totalPrice < 225) return;
 
     // Rabatt
-    rabatt = Math.ceil(totalPrice*0.10);
-    html += '<tr><td></td><td>Rabattaktion 10%:</td><td>-' + rabatt + '.-</td></tr>';
+    rabatt = Math.ceil(totalPrice*0.14);
+    html += '<tr><td></td><td>Rabattaktion 14%:</td><td>-' + rabatt + '.-</td></tr>';
     totalPrice-=rabatt;
 
     html += '<tr><td></td><td>Versand:</td><td>' + 10 + '.-</td></tr>';
@@ -124,7 +124,7 @@ buy = function() {
         totalPrice += priceForThisItem*amount;
     }
     
-    rabatt = Math.ceil(totalPrice*0.10);
+    rabatt = Math.ceil(totalPrice*0.14);
     totalPrice -= rabatt;   // Rabatt
     
     document.getElementById("preisBuyForm").innerHTML = totalPrice;
@@ -214,11 +214,11 @@ $( "#buyForm" ).submit(function( event ) {
         });
     }
 
-    rabatt = Math.ceil(totalPriceWithShipping*0.13);
+    rabatt = Math.ceil(totalPriceWithShipping*0.14);
     requestObj.items.push({
         type: "Jubiläumsaktion",
         image: "",
-        number: "10%",
+        number: "14%",
         price: -rabatt,
         amount: 1
     });

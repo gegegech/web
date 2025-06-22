@@ -36,9 +36,9 @@ function fillData() {
     if($("#template").val() == "template-email-invoice") {
         $("#saddleImage").attr("src", "https://gegegech.github.io/web/images/sattelbezug-small/Sattelbezug-"+$("#itemNr").val()+".jpg");
         $("#bellImage").attr("src", "");
-        $("#itemPrice").html("CHF <s>25.00</s> 21.75");
+        $("#itemPrice").html("CHF <s>25.00</s> 21.50");
         $("#shippingFees").html("CHF 3.00");
-        $("#totalPrice").html("CHF <s>28.00</s> 24.75");
+        $("#totalPrice").html("CHF <s>28.00</s> 24.50");
         $("#bellRow").hide();
         $("#saddleRow").show();
     }
