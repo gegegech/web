@@ -34,7 +34,7 @@ displayOrder = function() {
 
         var bundle;
         try {
-            var bundle = JSON.parse(i.slice(0,-1));
+        var bundle = JSON.parse(i.slice(0,-1));
         }
         catch(err) {
         }
