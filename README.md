@@ -16,7 +16,7 @@ Vorbereitung
 Entwicklung
 -----------
 
-3. Lupe -> Terminal öffnen
+3. Lupe -> Terminal öffnen.
 4. in Terminal zum Entwicklungsverzeichnis gehen: cd ~/Documents/web/``
 5. in Terminal die Live-Vorschau starten: `gulp`
 6. die Quelldateien in Documents/gegege.ch/app/ nach Wunsch ändern (z.B. Bilder hinzufügen, Javascript anpassen, ... - gemäss "Rezept" unten)
