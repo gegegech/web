@@ -23,7 +23,7 @@ Entwicklung
 7. wenn fertig: in Terminal die Live-Vorschau beenden: [control+c]
 
 
-Paketierung
+Paketierung:
 -----------
 
 8. in Terminal Paketierung durchführen: `gulp deploy`
