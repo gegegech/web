@@ -53,7 +53,8 @@ listeSattelGlobal = [
     { "Sattel": "8434", "Glocke": "8533", "Bem": "5 andere" },
     { "Sattel": "8433", "Glocke": "8532", "Bem": "5 andere" },
     { "Sattel": "8432", "Glocke": "8530", "Bem": "5 andere" },
-    { "Sattel": "8431", "Glocke": "8531", "Bem": "5 andere" }
+    { "Sattel": "8431", "Glocke": "8531", "Bem": "5 andere" },
+    { "Sattel": "8430", "Glocke": "8528", "Bem": "5 andere" }
 ];
 
 
