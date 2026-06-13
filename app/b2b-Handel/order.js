@@ -76,8 +76,8 @@ displayOrder = function() {
     if (totalPrice < 225) return;
 
     // Rabatt
-    rabatt = Math.ceil(totalPrice*0.14);
-    html += '<tr><td></td><td>Rabattaktion 14%:</td><td>-' + rabatt + '.-</td></tr>';
+    rabatt = Math.ceil(totalPrice*0.15);
+    html += '<tr><td></td><td>Rabattaktion 15%:</td><td>-' + rabatt + '.-</td></tr>';
     totalPrice-=rabatt;
 
     html += '<tr><td></td><td>Versand:</td><td>' + 10 + '.-</td></tr>';
@@ -218,7 +218,7 @@ $( "#buyForm" ).submit(function( event ) {
     requestObj.items.push({
         type: "Jubiläumsaktion",
         image: "",
-        number: "14%",
+        number: "15%",
         price: -rabatt,
         amount: 1
     });
