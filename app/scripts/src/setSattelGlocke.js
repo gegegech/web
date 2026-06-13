@@ -2,9 +2,9 @@ var SetSattelGlocke = new function() {
 
     var self = this;
 
-    self.preis = '<s>35.-</s> 30.-';
+    self.preis = '<s>35.-</s> 29.75';
     self.preisVersand = '10.-';
-    self.preisTotal = '<s>45.-</s> 40.-';
+    self.preisTotal = '<s>45.-</s> 39.75';
 
 
     self.buy = function(bundle) {

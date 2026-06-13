@@ -36,27 +36,27 @@ function fillData() {
     if($("#template").val() == "template-email-invoice") {
         $("#saddleImage").attr("src", "https://gegegech.github.io/web/images/sattelbezug-small/Sattelbezug-"+$("#itemNr").val()+".jpg");
         $("#bellImage").attr("src", "");
-        $("#itemPrice").html("CHF <s>25.00</s> 21.50");
+        $("#itemPrice").html("CHF <s>25.00</s> 21.25");
         $("#shippingFees").html("CHF 3.00");
-        $("#totalPrice").html("CHF <s>28.00</s> 24.50");
+        $("#totalPrice").html("CHF <s>28.00</s> 24.25");
         $("#bellRow").hide();
         $("#saddleRow").show();
     }
     if($("#template").val() == "template-glocke-email-invoice") {
         $("#bellImage").attr("src", "https://gegegech.github.io/web/images/glocke-small/Veloglocke-"+$("#bellNr").val()+".jpg");
         $("#saddleImage").attr("src", "");
-        $("#itemPrice").html("CHF <s>14.00</s> 12.00");
+        $("#itemPrice").html("CHF <s>14.00</s> 11.90");
         $("#shippingFees").html("CHF 10.00");
-        $("#totalPrice").html("CHF <s>24.00</s> 22.00");
+        $("#totalPrice").html("CHF <s>24.00</s> 21.90");
         $("#saddleRow").hide();
         $("#bellRow").show();
     }
     if($("#template").val() == "template-set-email-invoice") {
         $("#saddleImage").attr("src", "https://gegegech.github.io/web/images/sattelbezug-small/Sattelbezug-"+$("#itemNr").val()+".jpg");
         $("#bellImage").attr("src", "https://gegegech.github.io/web/images/glocke-small/Veloglocke-"+$("#bellNr").val()+".jpg");
-        $("#itemPrice").html("CHF <s>35.00</s> 30.00");
+        $("#itemPrice").html("CHF <s>35.00</s> 29.75");
         $("#shippingFees").html("CHF 10.00");
-        $("#totalPrice").html("CHF <s>45.00</s> 40.00");
+        $("#totalPrice").html("CHF <s>45.00</s> 39.75");
         $("#saddleRow").show();
         $("#bellRow").show();
     }
