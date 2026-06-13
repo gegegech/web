@@ -124,7 +124,7 @@ buy = function() {
         totalPrice += priceForThisItem*amount;
     }
     
-    rabatt = Math.ceil(totalPrice*0.14);
+    rabatt = Math.ceil(totalPrice*0.15);
     totalPrice -= rabatt;   // Rabatt
     
     document.getElementById("preisBuyForm").innerHTML = totalPrice;
@@ -214,7 +214,7 @@ $( "#buyForm" ).submit(function( event ) {
         });
     }
 
-    rabatt = Math.ceil(totalPriceWithShipping*0.14);
+    rabatt = Math.ceil(totalPriceWithShipping*0.15);
     requestObj.items.push({
         type: "Jubiläumsaktion",
         image: "",
