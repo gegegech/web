@@ -42,7 +42,7 @@ listeSattelGlobal = [
     // { "Sattel": "8470", "Glocke": "8528", "Bem": "4 blau" },
     // { "Sattel": "8482", "Glocke": "8536", "Bem": "4 blau" },
     { "Sattel": "8439", "Glocke": "8538", "Bem": "4 blau" },
-    { "Sattel": "8475", "Glocke": "8564", "Bem": "4 blau" },
+    // { "Sattel": "8475", "Glocke": "8564", "Bem": "4 blau" },
     // { "Sattel": "8469", "Glocke": "8536", "Bem": "4 blau" },
     // { "Sattel": "8471", "Glocke": "8566", "Bem": "4 blau" },
     // { "Sattel": "8472", "Glocke": "8565", "Bem": "4 blau" },
